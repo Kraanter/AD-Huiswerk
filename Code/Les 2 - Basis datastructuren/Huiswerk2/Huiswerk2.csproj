@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\MyArrayList\IMyArrayList.cs" Link="MyArrayList\IMyArrayList.cs" />
+    <Compile Include="..\..\MyArrayList\MyArrayList.cs" Link="MyArrayList\MyArrayList.cs" />
+    <Compile Include="..\..\MyArrayList\MyArrayListBuilder.cs" Link="MyArrayList\MyArrayListBuilder.cs" />
+    <Compile Include="..\..\MyLinkedList\IMyLinkedList.cs" Link="MyLinkedList\IMyLinkedList.cs" />
+    <Compile Include="..\..\MyLinkedList\MyLinkedList.cs" Link="MyLinkedList\MyLinkedList.cs" />
+    <Compile Include="..\..\MyLinkedList\MyLinkedListBuilder.cs" Link="MyLinkedList\MyLinkedListBuilder.cs" />
+    <Compile Include="..\..\MyLinkedList\MyLinkedListNode.cs" Link="MyLinkedList\MyLinkedListNode.cs" />
+    <Compile Include="..\..\MyQueue\IMyQueue.cs" Link="MyQueue\IMyQueue.cs" />
+    <Compile Include="..\..\MyQueue\MyQueue.cs" Link="MyQueue\MyQueue.cs" />
+    <Compile Include="..\..\MyQueue\MyQueueBuilder.cs" Link="MyQueue\MyQueueBuilder.cs" />
+    <Compile Include="..\..\MyStack\IMyStack.cs" Link="MyStack\IMyStack.cs" />
+    <Compile Include="..\..\MyStack\MyStack.cs" Link="MyStack\MyStack.cs" />
+    <Compile Include="..\..\MyStack\MyStackBuilder.cs" Link="MyStack\MyStackBuilder.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MyArrayList\" />
+    <Folder Include="MyLinkedList\" />
+    <Folder Include="MyStack\" />
+    <Folder Include="MyQueue\" />
+  </ItemGroup>
+
+</Project>
