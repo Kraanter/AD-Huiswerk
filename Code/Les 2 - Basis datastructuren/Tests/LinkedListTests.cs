@@ -533,6 +533,56 @@ namespace AD
             Assert.AreEqual(expected, actual);
         }
 
+        //------------------------------------------------------------
+        // Tests to check the internal datastructure. In this case,
+        // check whether the datastructure is built without the
+        // sentinel node (header node).
+        //------------------------------------------------------------
+
+        [Test]
+        public void MyLinkedList_7_Internal_1_Constructor()
+        {
+            // Arrange
+            MyLinkedList<string> lst = (MyLinkedList<string>) DSBuilder.CreateMyLinkedList();
+
+            // Assert
+            Assert.IsNull(lst.head);
+        }
+
+        [Test]
+        public void MyLinkedList_7_Internal_2_AddFirst()
+        {
+            // Arrange
+            MyLinkedList<string> lst = (MyLinkedList<string>)DSBuilder.CreateMyLinkedList();
+
+            // Act
+            lst.AddFirst("1");
+
+            // Assert
+            Assert.IsNotNull(lst.head);
+            Assert.IsNull(lst.head.next);
+        }
+
+        [Test]
+        public void MyLinkedList_7_Internal_3_Insert()
+        {
+            // Arrange
+            MyLinkedList<string> lst = (MyLinkedList<string>)DSBuilder.CreateMyLinkedList();
+            lst.AddFirst("1");
+            lst.AddFirst("2");
+            lst.AddFirst("3");
+
+            // Act
+            lst.Insert(1, "4");
+
+            // Assert
+            Assert.IsNotNull(lst.head);
+            Assert.IsNotNull(lst.head.next);
+            Assert.IsNotNull(lst.head.next.next);
+            Assert.IsNotNull(lst.head.next.next.next);
+            Assert.IsNull(lst.head.next.next.next.next);
+        }
+
 
     }
 }
