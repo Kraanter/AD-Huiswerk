@@ -2,7 +2,7 @@
 {
     public partial class MyLinkedList<T> : IMyLinkedList<T>
     {
-        public MyLinkedListNode<T> header;
+        public MyLinkedListNode<T> head;
         private int size;
 
         public MyLinkedList()
