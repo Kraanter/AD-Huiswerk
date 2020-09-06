@@ -49,7 +49,7 @@
             System.Console.WriteLine(ll);
             try
             {
-                ll.Insert(4, "kan niet");
+                ll.Insert(4, "y");
             }
             catch (MyLinkedListIndexOutOfRangeException e)
             {
