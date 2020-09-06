@@ -2,7 +2,7 @@
 {
     class Program
     {
-        static void Opgave1()
+        static void Ex1ArrayList()
         {
             System.Console.WriteLine("\n=====   Opgave 1 : MyArrayList   =====\n");
 
@@ -36,7 +36,7 @@
         }
 
 
-        static void Opgave2()
+        static void Ex2LinkedList()
         {
             System.Console.WriteLine("\n=====   Opgave 2 : MyLinkedList   =====\n");
 
@@ -57,6 +57,22 @@
             }
 
             ll.Clear();
+            System.Console.WriteLine(ll);
+            ll.AddFirst("a");
+            ll.AddFirst("b");
+            ll.AddFirst("c");
+            ll.Insert(2, "x");
+            System.Console.WriteLine(ll);
+            try
+            {
+                ll.Insert(5, "kan niet");
+            }
+            catch (MyLinkedListIndexOutOfRangeException e)
+            {
+                System.Console.WriteLine("Exception (zoals verwacht): {0}", e.Message);
+            }
+
+            ll.Clear();
             ll.AddFirst("a");
             ll.AddFirst("b");
             System.Console.WriteLine(ll.GetFirst());
@@ -67,7 +83,7 @@
         }
 
 
-        static void Opgave3()
+        static void Ex3Stack()
         {
             System.Console.WriteLine("\n=====   Opgave 3 : MyStack   =====\n");
 
@@ -90,7 +106,7 @@
         }
 
 
-        static void Opgave4()
+        static void Ex4BracketChecker()
         {
             System.Console.WriteLine("\n=====   Opgave 4 : BracketChecker   =====\n");
 
@@ -107,7 +123,7 @@
         }
 
 
-        static void Opgave5()
+        static void Ex5Queue()
         {
             System.Console.WriteLine("\n=====   Opgave 5 : MyQueue   =====\n");
 
@@ -133,11 +149,11 @@
 
         static void Main(string[] args)
         {
-            //Opgave1();
-            //Opgave2();
-            //Opgave3();
-            //Opgave4();
-            //Opgave5();
+            //Ex1ArrayList();
+            //Ex2LinkedList();
+            //Ex3Stack();
+            //Ex4BracketChecker();
+            //Ex5Queue();
         }
     }
 }
