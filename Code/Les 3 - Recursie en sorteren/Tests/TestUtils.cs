@@ -2,9 +2,9 @@
 
 namespace AD
 {
-    public partial class TestUtils
+    public class TestUtils
     {
-        public string TrimmedStringWithSingleSpaces(string s)
+        public static string TrimmedStringWithSingleSpaces(string s)
         {
             return Regex.Replace(s, @"\s+", " ").Trim();
         }
