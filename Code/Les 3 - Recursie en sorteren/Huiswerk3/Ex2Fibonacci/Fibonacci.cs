@@ -4,16 +4,27 @@
     {
         static long calls = 0;
 
+        private static long FibonacciRecursiveInternal(int n)
+        {
+            calls++;
+            throw new System.NotImplementedException();
+        }
+
         public static long FibonacciRecursive(int n)
         {
             calls = 0;
+            return FibonacciRecursiveInternal(n);
+        }
+
+        private static long FibonacciIterativeInternal(int n)
+        {
             throw new System.NotImplementedException();
         }
 
         public static long FibonacciIterative(int n)
         {
             calls = 0;
-            throw new System.NotImplementedException();
+            return FibonacciIterativeInternal(n);
         }
 
         public static void Run()
