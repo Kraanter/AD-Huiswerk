@@ -1,6 +1,6 @@
 namespace AD
 {
-    public interface IFirstChildNextSibling<T>
+    public partial interface IFirstChildNextSibling<T>
     {
         int Size();
         void PrintPreOrder();

@@ -3,11 +3,9 @@ using System.Collections.Generic;
 
 namespace AD
 {
-    public class QuickSort : Sorter
+    public partial class QuickSort : Sorter
     {
-
         private static int CUTOFF = 3;
-
 
         public override void Sort(List<int> list)
         {

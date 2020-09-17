@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace AD
 {
-    public abstract class Sorter
+    public abstract partial class Sorter
     {
         public abstract void Sort(List<int> list);
 

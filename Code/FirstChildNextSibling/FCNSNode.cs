@@ -1,6 +1,6 @@
 namespace AD
 {
-    public class FCNSNode<T> : IFCNSNode<T>
+    public partial class FCNSNode<T> : IFCNSNode<T>
     {
         public FCNSNode<T> firstChild;
         public FCNSNode<T> nextSibling;

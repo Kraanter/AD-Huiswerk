@@ -1,6 +1,6 @@
 namespace AD
 {
-    public interface IBinaryTree<T>
+    public partial interface IBinaryTree<T>
     {
         //----------------------------------------------------------------------
         // Methods that have to be implemented for exam

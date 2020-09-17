@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace AD
 {
     [TestFixture]
-    public class FirstChildNextSiblingTests
+    public partial class FirstChildNextSiblingTests
     {
         [Test]
         public void FirstChildNextSibling_1_Constructor_1_SizeReturnsProperResult()

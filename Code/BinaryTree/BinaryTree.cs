@@ -1,6 +1,6 @@
 namespace AD
 {
-    public class BinaryTree<T> : IBinaryTree<T>
+    public partial class BinaryTree<T> : IBinaryTree<T>
     {
         public BinaryNode<T> root;
 
