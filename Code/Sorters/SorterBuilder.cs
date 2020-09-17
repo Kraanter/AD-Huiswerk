@@ -21,6 +21,11 @@
             return new ShellSort();
         }
 
+        public static Sorter CreateQuickSorter()
+        {
+            return new QuickSort();
+        }
+
         public static Sorter CreateSorter(string sorterName)
         {
             if (sorterName == "InsertionSort")
@@ -29,6 +34,8 @@
                 return CreateMergeSorter();
             else if (sorterName == "ShellSort")
                 return CreateShellSorter();
+            else if (sorterName == "QuickSort")
+                return CreateQuickSorter();
             else
                 return null;
         }

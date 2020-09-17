@@ -9,6 +9,7 @@
   <ItemGroup>
     <Compile Include="..\..\Sorters\InsertionSort.cs" Link="Ex7Sorting\InsertionSort.cs" />
     <Compile Include="..\..\Sorters\MergeSort.cs" Link="Ex7Sorting\MergeSort.cs" />
+    <Compile Include="..\..\Sorters\QuickSort.cs" Link="Ex7Sorting\QuickSort.cs" />
     <Compile Include="..\..\Sorters\ShellSort.cs" Link="Ex7Sorting\ShellSort.cs" />
     <Compile Include="..\..\Sorters\Sorter.cs" Link="Ex7Sorting\Sorter.cs" />
     <Compile Include="..\..\Sorters\SorterBuilder.cs" Link="Ex7Sorting\SorterBuilder.cs" />
