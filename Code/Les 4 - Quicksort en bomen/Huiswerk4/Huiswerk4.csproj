@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>AD</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\BinaryTree\BinaryNode.cs" Link="BinaryTree\BinaryNode.cs" />
+    <Compile Include="..\..\BinaryTree\BinaryTree.cs" Link="BinaryTree\BinaryTree.cs" />
+    <Compile Include="..\..\BinaryTree\BinaryTreeBuilder.cs" Link="BinaryTree\BinaryTreeBuilder.cs" />
+    <Compile Include="..\..\BinaryTree\IBinaryTree.cs" Link="BinaryTree\IBinaryTree.cs" />
+    <Compile Include="..\..\FirstChildNextSibling\FCNSBuilder.cs" Link="FirstChildNextSibling\FCNSBuilder.cs" />
+    <Compile Include="..\..\FirstChildNextSibling\FCNSNode.cs" Link="FirstChildNextSibling\FCNSNode.cs" />
+    <Compile Include="..\..\FirstChildNextSibling\FirstChildNextSibling.cs" Link="FirstChildNextSibling\FirstChildNextSibling.cs" />
+    <Compile Include="..\..\FirstChildNextSibling\IFCNSNode.cs" Link="FirstChildNextSibling\IFCNSNode.cs" />
+    <Compile Include="..\..\FirstChildNextSibling\IFirstChildNextSibling.cs" Link="FirstChildNextSibling\IFirstChildNextSibling.cs" />
+    <Compile Include="..\..\Sorters\InsertionSort.cs" Link="QuickSort\InsertionSort.cs" />
+    <Compile Include="..\..\Sorters\MergeSort.cs" Link="QuickSort\MergeSort.cs" />
+    <Compile Include="..\..\Sorters\QuickSort.cs" Link="QuickSort\QuickSort.cs" />
+    <Compile Include="..\..\Sorters\ShellSort.cs" Link="QuickSort\ShellSort.cs" />
+    <Compile Include="..\..\Sorters\Sorter.cs" Link="QuickSort\Sorter.cs" />
+    <Compile Include="..\..\Sorters\SorterBuilder.cs" Link="QuickSort\SorterBuilder.cs" />
+  </ItemGroup>
+
+</Project>
