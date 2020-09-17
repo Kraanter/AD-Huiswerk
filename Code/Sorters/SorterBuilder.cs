@@ -31,7 +31,6 @@
                 return CreateShellSorter();
             else
                 return null;
-            
         }
     }
 }
