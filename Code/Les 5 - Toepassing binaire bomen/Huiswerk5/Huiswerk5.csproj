@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>AD</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\BinarySearchTree\BinarySearchTree.cs" Link="BinarySearchTree\BinarySearchTree.cs" />
+    <Compile Include="..\..\BinarySearchTree\BinarySearchTreeBuilder.cs" Link="BinarySearchTree\BinarySearchTreeBuilder.cs" />
+    <Compile Include="..\..\BinarySearchTree\IBinarySearchTree.cs" Link="BinarySearchTree\IBinarySearchTree.cs" />
+    <Compile Include="..\..\BinaryTree\BinaryNode.cs" Link="BinaryTree\BinaryNode.cs" />
+    <Compile Include="..\..\BinaryTree\BinaryTree.cs" Link="BinaryTree\BinaryTree.cs" />
+    <Compile Include="..\..\BinaryTree\IBinaryTree.cs" Link="BinaryTree\IBinaryTree.cs" />
+    <Compile Include="..\..\PriorityQueue\IPriorityQueue.cs" Link="PriorityQueue\IPriorityQueue.cs" />
+    <Compile Include="..\..\PriorityQueue\PriorityQueue.cs" Link="PriorityQueue\PriorityQueue.cs" />
+    <Compile Include="..\..\PriorityQueue\PriorityQueueBuilder.cs" Link="PriorityQueue\PriorityQueueBuilder.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="BinaryTree\" />
+    <Folder Include="BinarySearchTree\" />
+    <Folder Include="PriorityQueue\" />
+  </ItemGroup>
+
+</Project>
