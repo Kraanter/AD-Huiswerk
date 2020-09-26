@@ -3,7 +3,7 @@ using NUnit.Framework;
 namespace AD
 {
     [TestFixture]
-    public class Ex2PriorityQueueTests
+    public partial class PriorityQueueTests
     {
         [Test]
         public void PriorityQueue_01_Size_01_OnEmptyQueue()
