@@ -5,7 +5,7 @@ using System.Linq;
 namespace AD
 {
     [TestFixture]
-    public partial class Ex7SortingTests
+    public partial class SortingTests
     {
         [Test, Combinatorial]
         public void Sort(

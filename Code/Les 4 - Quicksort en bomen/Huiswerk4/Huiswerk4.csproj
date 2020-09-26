@@ -16,12 +16,12 @@
     <Compile Include="..\..\FirstChildNextSibling\FirstChildNextSibling.cs" Link="FirstChildNextSibling\FirstChildNextSibling.cs" />
     <Compile Include="..\..\FirstChildNextSibling\IFCNSNode.cs" Link="FirstChildNextSibling\IFCNSNode.cs" />
     <Compile Include="..\..\FirstChildNextSibling\IFirstChildNextSibling.cs" Link="FirstChildNextSibling\IFirstChildNextSibling.cs" />
-    <Compile Include="..\..\Sorters\InsertionSort.cs" Link="QuickSort\InsertionSort.cs" />
-    <Compile Include="..\..\Sorters\MergeSort.cs" Link="QuickSort\MergeSort.cs" />
-    <Compile Include="..\..\Sorters\QuickSort.cs" Link="QuickSort\QuickSort.cs" />
-    <Compile Include="..\..\Sorters\ShellSort.cs" Link="QuickSort\ShellSort.cs" />
-    <Compile Include="..\..\Sorters\Sorter.cs" Link="QuickSort\Sorter.cs" />
-    <Compile Include="..\..\Sorters\SorterBuilder.cs" Link="QuickSort\SorterBuilder.cs" />
+    <Compile Include="..\..\Sorters\InsertionSort.cs" Link="Sorters\InsertionSort.cs" />
+    <Compile Include="..\..\Sorters\MergeSort.cs" Link="Sorters\MergeSort.cs" />
+    <Compile Include="..\..\Sorters\QuickSort.cs" Link="Sorters\QuickSort.cs" />
+    <Compile Include="..\..\Sorters\ShellSort.cs" Link="Sorters\ShellSort.cs" />
+    <Compile Include="..\..\Sorters\Sorter.cs" Link="Sorters\Sorter.cs" />
+    <Compile Include="..\..\Sorters\SorterBuilder.cs" Link="Sorters\SorterBuilder.cs" />
   </ItemGroup>
 
 </Project>
