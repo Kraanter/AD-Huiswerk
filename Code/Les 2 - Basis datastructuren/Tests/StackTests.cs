@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace AD
 {
     [TestFixture]
-    public class MyStackTests
+    public partial class MyStackTests
     {
         [Test]
         public void MyStack_1_Constructor_1_IsEmptyReturnsTrue()

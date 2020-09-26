@@ -3,7 +3,7 @@ using NUnit.Framework;
 namespace AD
 {
     [TestFixture]
-    public class BracketCheckerTests
+    public partial class BracketCheckerTests
     {
         [Test]
         public void BracketChecker1_1_EmptyString()

@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace AD
 {
     [TestFixture]
-    public class MyLinkedListTests
+    public partial class MyLinkedListTests
     {
         [Test]
         public void MyLinkedList_1_Constructor0_1_SizeEquals0()

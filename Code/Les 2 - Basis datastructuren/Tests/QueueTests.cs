@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace AD
 {
     [TestFixture]
-    public class MyQueueTests
+    public partial class MyQueueTests
     {
         [Test]
         public void MyQueue_1_Constructor_1_IsEmptyReturnsTrue()

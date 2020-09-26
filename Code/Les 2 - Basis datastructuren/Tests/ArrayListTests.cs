@@ -5,7 +5,7 @@ using System;
 namespace AD
 {
     [TestFixture]
-    public class MyArrayListTests
+    public partial class MyArrayListTests
     {
         [Test]
         public void MyArrayList_1_Constructor5_1_CapacityEquals5()
