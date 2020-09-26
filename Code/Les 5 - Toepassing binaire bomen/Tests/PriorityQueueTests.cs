@@ -413,10 +413,9 @@ namespace AD
         {
             // Arrange
             IPriorityQueue<int> q = DSBuilder.CreatePriorityQueueFull();
-            int current_size = q.Size();
-            // Act
 
-            for (int i = 0; i < current_size * 100; i++)
+            // Act
+            for (int i = 0; i < PriorityQueue<int>.DEFAULT_CAPACITY * 100; i++)
                 q.Add(3);
 
             // Assert
