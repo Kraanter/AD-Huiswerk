@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -8,6 +8,10 @@
 </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="..\..\TestUtils\TestUtils.cs" Link="TestUtils\TestUtils.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
@@ -15,6 +19,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Huiswerk3\Huiswerk3.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="TestUtils\" />
   </ItemGroup>
 
 </Project>

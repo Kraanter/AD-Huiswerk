@@ -7,10 +7,6 @@ namespace AD
     [TestFixture]
     public class Ex6ForwardStringTests
     {
-        //private string TrimmedStringWithSingleSpaces(string s)
-        //{
-        //    return Regex.Replace(s, @"\s+", " ").Trim();
-        //}
 
         [TestCase(0, "")]
         [TestCase(3, "")]
