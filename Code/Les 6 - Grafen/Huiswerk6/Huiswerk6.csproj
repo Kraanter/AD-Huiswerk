@@ -15,7 +15,6 @@
     <Compile Include="..\..\Graph\Vertex.cs" Link="Graph\Vertex.cs" />
     <Compile Include="..\..\PriorityQueue\IPriorityQueue.cs" Link="PriorityQueue\IPriorityQueue.cs" />
     <Compile Include="..\..\PriorityQueue\PriorityQueue.cs" Link="PriorityQueue\PriorityQueue.cs" />
-    <Compile Include="..\..\PriorityQueue\PriorityQueueBuilder.cs" Link="PriorityQueue\PriorityQueueBuilder.cs" />
   </ItemGroup>
 
   <ItemGroup>
