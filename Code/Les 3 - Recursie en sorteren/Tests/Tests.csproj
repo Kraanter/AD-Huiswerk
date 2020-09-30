@@ -8,7 +8,7 @@
 </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\TestUtils\TestUtils.cs" Link="TestUtils\TestUtils.cs" />
+    <Compile Include="..\..\TestUtils\TestUtils.cs" Link="TestUtils.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,10 +19,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Huiswerk3\Huiswerk3.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="TestUtils\" />
   </ItemGroup>
 
 </Project>

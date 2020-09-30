@@ -9,6 +9,9 @@
 
   <ItemGroup>
     <Compile Include="..\..\MyArrayList\MyArrayListTests.cs" Link="MyArrayListTests.cs" />
+    <Compile Include="..\..\MyLinkedList\MyLinkedListTests.cs" Link="MyLinkedListTests.cs" />
+    <Compile Include="..\..\MyQueue\MyQueueTests.cs" Link="MyQueueTests.cs" />
+    <Compile Include="..\..\MyStack\MyStackTests.cs" Link="MyStackTests.cs" />
   </ItemGroup>
 
   <ItemGroup>
