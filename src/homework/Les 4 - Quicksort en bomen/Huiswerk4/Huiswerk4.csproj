@@ -16,12 +16,12 @@
     <Compile Include="..\..\..\Datastructures\FirstChildNextSibling\FirstChildNextSibling.cs" Link="FirstChildNextSibling\FirstChildNextSibling.cs" />
     <Compile Include="..\..\..\Datastructures\FirstChildNextSibling\IFCNSNode.cs" Link="FirstChildNextSibling\IFCNSNode.cs" />
     <Compile Include="..\..\..\Datastructures\FirstChildNextSibling\IFirstChildNextSibling.cs" Link="FirstChildNextSibling\IFirstChildNextSibling.cs" />
-    <Compile Include="..\..\..\Datastructures\Sorters\InsertionSort.cs" Link="Sorters\InsertionSort.cs" />
-    <Compile Include="..\..\..\Datastructures\Sorters\MergeSort.cs" Link="Sorters\MergeSort.cs" />
-    <Compile Include="..\..\..\Datastructures\Sorters\QuickSort.cs" Link="Sorters\QuickSort.cs" />
-    <Compile Include="..\..\..\Datastructures\Sorters\ShellSort.cs" Link="Sorters\ShellSort.cs" />
-    <Compile Include="..\..\..\Datastructures\Sorters\Sorter.cs" Link="Sorters\Sorter.cs" />
-    <Compile Include="..\..\..\Datastructures\Sorters\SorterBuilder.cs" Link="Sorters\SorterBuilder.cs" />
+    <Compile Include="..\..\..\Algorithms\Sorters\InsertionSort.cs" Link="Sorters\InsertionSort.cs" />
+    <Compile Include="..\..\..\Algorithms\Sorters\MergeSort.cs" Link="Sorters\MergeSort.cs" />
+    <Compile Include="..\..\..\Algorithms\Sorters\QuickSort.cs" Link="Sorters\QuickSort.cs" />
+    <Compile Include="..\..\..\Algorithms\Sorters\ShellSort.cs" Link="Sorters\ShellSort.cs" />
+    <Compile Include="..\..\..\Algorithms\Sorters\Sorter.cs" Link="Sorters\Sorter.cs" />
+    <Compile Include="..\..\..\Algorithms\Sorters\SorterBuilder.cs" Link="Sorters\SorterBuilder.cs" />
   </ItemGroup>
 
 </Project>

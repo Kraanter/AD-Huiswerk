@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <Compile Include="..\..\..\Datastructures\Graph\GraphTests.cs" Link="GraphTests.cs" />
-    <Compile Include="..\..\..\Datastructures\TestUtils\TestUtils.cs" Link="TestUtils.cs" />
+    <Compile Include="..\..\..\Utils\TestUtils.cs" Link="TestUtils.cs" />
   </ItemGroup>
 
   <ItemGroup>
