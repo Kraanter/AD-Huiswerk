@@ -7,21 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\BinaryTree\BinaryNode.cs" Link="BinaryTree\BinaryNode.cs" />
-    <Compile Include="..\..\BinaryTree\BinaryTree.cs" Link="BinaryTree\BinaryTree.cs" />
-    <Compile Include="..\..\BinaryTree\BinaryTreeBuilder.cs" Link="BinaryTree\BinaryTreeBuilder.cs" />
-    <Compile Include="..\..\BinaryTree\IBinaryTree.cs" Link="BinaryTree\IBinaryTree.cs" />
-    <Compile Include="..\..\FirstChildNextSibling\FCNSBuilder.cs" Link="FirstChildNextSibling\FCNSBuilder.cs" />
-    <Compile Include="..\..\FirstChildNextSibling\FCNSNode.cs" Link="FirstChildNextSibling\FCNSNode.cs" />
-    <Compile Include="..\..\FirstChildNextSibling\FirstChildNextSibling.cs" Link="FirstChildNextSibling\FirstChildNextSibling.cs" />
-    <Compile Include="..\..\FirstChildNextSibling\IFCNSNode.cs" Link="FirstChildNextSibling\IFCNSNode.cs" />
-    <Compile Include="..\..\FirstChildNextSibling\IFirstChildNextSibling.cs" Link="FirstChildNextSibling\IFirstChildNextSibling.cs" />
-    <Compile Include="..\..\Sorters\InsertionSort.cs" Link="Sorters\InsertionSort.cs" />
-    <Compile Include="..\..\Sorters\MergeSort.cs" Link="Sorters\MergeSort.cs" />
-    <Compile Include="..\..\Sorters\QuickSort.cs" Link="Sorters\QuickSort.cs" />
-    <Compile Include="..\..\Sorters\ShellSort.cs" Link="Sorters\ShellSort.cs" />
-    <Compile Include="..\..\Sorters\Sorter.cs" Link="Sorters\Sorter.cs" />
-    <Compile Include="..\..\Sorters\SorterBuilder.cs" Link="Sorters\SorterBuilder.cs" />
+    <Compile Include="..\..\..\Datastructures\BinaryTree\BinaryNode.cs" Link="BinaryTree\BinaryNode.cs" />
+    <Compile Include="..\..\..\Datastructures\BinaryTree\BinaryTree.cs" Link="BinaryTree\BinaryTree.cs" />
+    <Compile Include="..\..\..\Datastructures\BinaryTree\BinaryTreeBuilder.cs" Link="BinaryTree\BinaryTreeBuilder.cs" />
+    <Compile Include="..\..\..\Datastructures\BinaryTree\IBinaryTree.cs" Link="BinaryTree\IBinaryTree.cs" />
+    <Compile Include="..\..\..\Datastructures\FirstChildNextSibling\FCNSBuilder.cs" Link="FirstChildNextSibling\FCNSBuilder.cs" />
+    <Compile Include="..\..\..\Datastructures\FirstChildNextSibling\FCNSNode.cs" Link="FirstChildNextSibling\FCNSNode.cs" />
+    <Compile Include="..\..\..\Datastructures\FirstChildNextSibling\FirstChildNextSibling.cs" Link="FirstChildNextSibling\FirstChildNextSibling.cs" />
+    <Compile Include="..\..\..\Datastructures\FirstChildNextSibling\IFCNSNode.cs" Link="FirstChildNextSibling\IFCNSNode.cs" />
+    <Compile Include="..\..\..\Datastructures\FirstChildNextSibling\IFirstChildNextSibling.cs" Link="FirstChildNextSibling\IFirstChildNextSibling.cs" />
+    <Compile Include="..\..\..\Datastructures\Sorters\InsertionSort.cs" Link="Sorters\InsertionSort.cs" />
+    <Compile Include="..\..\..\Datastructures\Sorters\MergeSort.cs" Link="Sorters\MergeSort.cs" />
+    <Compile Include="..\..\..\Datastructures\Sorters\QuickSort.cs" Link="Sorters\QuickSort.cs" />
+    <Compile Include="..\..\..\Datastructures\Sorters\ShellSort.cs" Link="Sorters\ShellSort.cs" />
+    <Compile Include="..\..\..\Datastructures\Sorters\Sorter.cs" Link="Sorters\Sorter.cs" />
+    <Compile Include="..\..\..\Datastructures\Sorters\SorterBuilder.cs" Link="Sorters\SorterBuilder.cs" />
   </ItemGroup>
 
 </Project>

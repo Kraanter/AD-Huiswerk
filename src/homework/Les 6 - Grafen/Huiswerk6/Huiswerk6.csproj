@@ -7,14 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\Graph\Edge.cs" Link="Graph\Edge.cs" />
-    <Compile Include="..\..\Graph\Graph.cs" Link="Graph\Graph.cs" />
-    <Compile Include="..\..\Graph\GraphBuilder.cs" Link="Graph\GraphBuilder.cs" />
-    <Compile Include="..\..\Graph\IGraph.cs" Link="Graph\IGraph.cs" />
-    <Compile Include="..\..\Graph\IVertex.cs" Link="Graph\IVertex.cs" />
-    <Compile Include="..\..\Graph\Vertex.cs" Link="Graph\Vertex.cs" />
-    <Compile Include="..\..\PriorityQueue\IPriorityQueue.cs" Link="PriorityQueue\IPriorityQueue.cs" />
-    <Compile Include="..\..\PriorityQueue\PriorityQueue.cs" Link="PriorityQueue\PriorityQueue.cs" />
+    <Compile Include="..\..\..\Datastructures\Graph\Edge.cs" Link="Graph\Edge.cs" />
+    <Compile Include="..\..\..\Datastructures\Graph\Graph.cs" Link="Graph\Graph.cs" />
+    <Compile Include="..\..\..\Datastructures\Graph\GraphBuilder.cs" Link="Graph\GraphBuilder.cs" />
+    <Compile Include="..\..\..\Datastructures\Graph\IGraph.cs" Link="Graph\IGraph.cs" />
+    <Compile Include="..\..\..\Datastructures\Graph\IVertex.cs" Link="Graph\IVertex.cs" />
+    <Compile Include="..\..\..\Datastructures\Graph\Vertex.cs" Link="Graph\Vertex.cs" />
+    <Compile Include="..\..\..\Datastructures\PriorityQueue\IPriorityQueue.cs" Link="PriorityQueue\IPriorityQueue.cs" />
+    <Compile Include="..\..\..\Datastructures\PriorityQueue\PriorityQueue.cs" Link="PriorityQueue\PriorityQueue.cs" />
   </ItemGroup>
 
   <ItemGroup>

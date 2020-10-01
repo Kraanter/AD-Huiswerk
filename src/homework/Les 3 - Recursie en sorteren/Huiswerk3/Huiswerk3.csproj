@@ -7,12 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\Sorters\InsertionSort.cs" Link="Sorters\InsertionSort.cs" />
-    <Compile Include="..\..\Sorters\MergeSort.cs" Link="Sorters\MergeSort.cs" />
-    <Compile Include="..\..\Sorters\QuickSort.cs" Link="Sorters\QuickSort.cs" />
-    <Compile Include="..\..\Sorters\ShellSort.cs" Link="Sorters\ShellSort.cs" />
-    <Compile Include="..\..\Sorters\Sorter.cs" Link="Sorters\Sorter.cs" />
-    <Compile Include="..\..\Sorters\SorterBuilder.cs" Link="Sorters\SorterBuilder.cs" />
+    <Compile Include="..\..\..\Datastructures\Sorters\InsertionSort.cs" Link="Sorters\InsertionSort.cs" />
+    <Compile Include="..\..\..\Datastructures\Sorters\MergeSort.cs" Link="Sorters\MergeSort.cs" />
+    <Compile Include="..\..\..\Datastructures\Sorters\QuickSort.cs" Link="Sorters\QuickSort.cs" />
+    <Compile Include="..\..\..\Datastructures\Sorters\ShellSort.cs" Link="Sorters\ShellSort.cs" />
+    <Compile Include="..\..\..\Datastructures\Sorters\Sorter.cs" Link="Sorters\Sorter.cs" />
+    <Compile Include="..\..\..\Datastructures\Sorters\SorterBuilder.cs" Link="Sorters\SorterBuilder.cs" />
   </ItemGroup>
 
 </Project>

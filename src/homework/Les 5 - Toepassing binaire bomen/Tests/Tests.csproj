@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\BinarySearchTree\BinarySearchTreeTests.cs" Link="BinarySearchTreeTests.cs" />
-    <Compile Include="..\..\PriorityQueue\PriorityQueueTests.cs" Link="PriorityQueueTests.cs" />
+    <Compile Include="..\..\..\Datastructures\BinarySearchTree\BinarySearchTreeTests.cs" Link="BinarySearchTreeTests.cs" />
+    <Compile Include="..\..\..\Datastructures\PriorityQueue\PriorityQueueTests.cs" Link="PriorityQueueTests.cs" />
   </ItemGroup>
   
   <ItemGroup>
