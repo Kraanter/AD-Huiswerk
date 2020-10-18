@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace AD
 {
     [TestFixture]
-    public partial class BinaryTreeTests
+    public partial class BinarySearchTreeTests
     {
         [Test]
         public void BinarySearchTree_01_Insert_01_After1Insert_IsEmptyReturnsFalse()
