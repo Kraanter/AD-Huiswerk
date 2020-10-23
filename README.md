@@ -22,8 +22,21 @@ Code base voor QSD - Algoritmen & Datastructuren
     - `MyArrayListTests.cs` : de testen behorend bij `MyArrayList`
   - `[MyLinkedList]`
   - ...
-- `[Exam]`
-  - De plek voor de uitgangssituatie van het praktisch tentamen
+- `[Exam]` : de practica. Deze folder is leeg op GIT, maar dien je 
+  tijdens het practicum te vullen met de uitgangssituatie van het
+  practicum (te vinden op de ELO).
+  
+  Denk eraan dat je bij het
+  inleveren je gehele codebase oplevert (i.v.m. links naar de al
+  gemaakte datastructuren).
+  - `[ad-20-21-vt-1]` : Eerste kans 20/21 voltijd : uitgangssituatie
+  - `[proeftentamen-ad-19-20-vt-1]` : proefpracticum. Initieel leeg,
+    maar moet gevuld worden met proeftentamen van ELO.
+    - `[MIBTree]`
+    - `[MIBTreeTests]`
+    - `[RegioGraaf]`
+    - `[RegioGraafTests]`
+    - `ad-19-20-vt-1.sln`
 - `[Homework]`
   - `[Les 2 - Basis datastructuren]`
     - `Huiswerk2.sln` : solution file met hierin de projecten
