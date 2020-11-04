@@ -4,6 +4,11 @@ namespace AD
     {
         public FCNSNode<T> root;
 
+        public IFCNSNode<T> GetRoot()
+        {
+            return root;
+        }
+
         public int Size()
         {
                throw new System.NotImplementedException();
