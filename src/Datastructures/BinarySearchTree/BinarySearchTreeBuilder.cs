@@ -36,6 +36,14 @@
             t.root = t6;
             return t;
         }
+
+        //              17
+        //     3                  26
+        //         8         24        32
+        //       7   12                    45
+        //                              34    50
+        //                                42
+        //                               37
         public static IBinarySearchTree<int> CreateBinarySearchTreeIntModerate()
         {
             BinaryNode<int> t7 = new BinaryNode<int>(7, null, null);
