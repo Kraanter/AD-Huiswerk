@@ -10,7 +10,7 @@ namespace AD
         public void MyStack_1_Constructor_1_IsEmptyReturnsTrue()
         {
             // Arrange
-            IMyStack<string> stack = DSBuilder.CreateMyStack();
+            IMyStack<string> stack = DSBuilder.CreateMyStackStringEmpty();
             bool expected = true;
 
             // Act
@@ -24,7 +24,7 @@ namespace AD
         public void MyStack_2_Push_1_IsEmptyReturnsFalse()
         {
             // Arrange
-            IMyStack<string> stack = DSBuilder.CreateMyStack();
+            IMyStack<string> stack = DSBuilder.CreateMyStackStringEmpty();
             bool expected = false;
 
             // Act
@@ -39,7 +39,7 @@ namespace AD
         public void MyStack_2_Push_2_TopIsOkAfter1Push()
         {
             // Arrange
-            IMyStack<string> stack = DSBuilder.CreateMyStack();
+            IMyStack<string> stack = DSBuilder.CreateMyStackStringEmpty();
             string expected = "a";
 
             // Act
@@ -54,7 +54,7 @@ namespace AD
         public void MyStack_2_Push_3_TopIsOkAfter3Push()
         {
             // Arrange
-            IMyStack<string> stack = DSBuilder.CreateMyStack();
+            IMyStack<string> stack = DSBuilder.CreateMyStackStringEmpty();
             string expected = "c";
 
             // Act
@@ -71,7 +71,7 @@ namespace AD
         public void MyStack_2_Push_4_PopIsOkAfter1Push()
         {
             // Arrange
-            IMyStack<string> stack = DSBuilder.CreateMyStack();
+            IMyStack<string> stack = DSBuilder.CreateMyStackStringEmpty();
             string expected = "a";
 
             // Act
@@ -86,7 +86,7 @@ namespace AD
         public void MyStack_2_Push_5_PopIsOkAfter3Push()
         {
             // Arrange
-            IMyStack<string> stack = DSBuilder.CreateMyStack();
+            IMyStack<string> stack = DSBuilder.CreateMyStackStringEmpty();
             string expected = "c";
 
             // Act
@@ -103,7 +103,7 @@ namespace AD
         public void MyStack_2_Push_6_TwoTimesPopIsOkAfter3Push()
         {
             // Arrange
-            IMyStack<string> stack = DSBuilder.CreateMyStack();
+            IMyStack<string> stack = DSBuilder.CreateMyStackStringEmpty();
             string expected = "b";
 
             // Act
@@ -121,7 +121,7 @@ namespace AD
         public void MyStack_3_Top_1_ThrowsExceptionOnEmptyStack()
         {
             // Arrange
-            IMyStack<string> stack = DSBuilder.CreateMyStack();
+            IMyStack<string> stack = DSBuilder.CreateMyStackStringEmpty();
 
             // Act & Assert
             Assert.Throws(typeof(MyStackEmptyException), () => stack.Top());
@@ -131,7 +131,7 @@ namespace AD
         public void MyStack_3_Top_2_IsEmptyReturnsFalseAfterTopOnOneElement()
         {
             // Arrange
-            IMyStack<string> stack = DSBuilder.CreateMyStack();
+            IMyStack<string> stack = DSBuilder.CreateMyStackStringEmpty();
             bool expected = false;
 
             // Act
@@ -147,7 +147,7 @@ namespace AD
         public void MyStack_4_Pop_1_ThrowsExceptionOnEmptyList()
         {
             // Arrange
-            IMyStack<string> stack = DSBuilder.CreateMyStack();
+            IMyStack<string> stack = DSBuilder.CreateMyStackStringEmpty();
 
             // Act & Assert
             Assert.Throws(typeof(MyStackEmptyException), () => stack.Pop());
@@ -157,7 +157,7 @@ namespace AD
         public void MyStack_4_Pop_2_IsEmptyReturnsTrueAfterTopOnOneElement()
         {
             // Arrange
-            IMyStack<string> stack = DSBuilder.CreateMyStack();
+            IMyStack<string> stack = DSBuilder.CreateMyStackStringEmpty();
             bool expected = true;
 
             // Act

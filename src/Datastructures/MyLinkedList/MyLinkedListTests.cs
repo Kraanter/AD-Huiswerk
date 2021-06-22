@@ -10,7 +10,7 @@ namespace AD
         public void MyLinkedList_1_Constructor0_1_SizeEquals0()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             int expected = 0;
 
             // Act
@@ -24,7 +24,7 @@ namespace AD
         public void MyLinkedList_1_Constructor0_2_ThrowsExceptionOnGetFirst()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
 
             // Act & Assert
             Assert.Throws(typeof(MyLinkedListEmptyException), () => lst.GetFirst());
@@ -34,7 +34,7 @@ namespace AD
         public void MyLinkedList_2_AddFirst_1_SizeEquals1After1Insert()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             int expected = 1;
 
             // Act
@@ -49,7 +49,7 @@ namespace AD
         public void MyLinkedList_2_AddFirst_2_SizeEquals3After3Inserts()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             int expected = 3;
 
             // Act
@@ -66,7 +66,7 @@ namespace AD
         public void MyLinkedList_2_AddFirst_3_GetFirstOkAfter1Insert()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             string expected = "1";
 
             // Act
@@ -81,7 +81,7 @@ namespace AD
         public void MyLinkedList_2_AddFirst_4_GetFirstOkAfter3Inserts()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             string expected = "3";
 
             // Act
@@ -98,7 +98,7 @@ namespace AD
         public void MyLinkedList_3_RemoveFirst_1_ThrowsExceptionOnEmptyList()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
 
             // Act & Assert
             Assert.Throws(typeof(MyLinkedListEmptyException), () => lst.RemoveFirst());
@@ -108,7 +108,7 @@ namespace AD
         public void MyLinkedList_3_RemoveFirst_2_SizeEquals0After1Insert()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             int expected = 0;
 
@@ -124,7 +124,7 @@ namespace AD
         public void MyLinkedList_3_RemoveFirst_3_SizeEquals2After3Inserts()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             lst.AddFirst("2");
             lst.AddFirst("3");
@@ -142,7 +142,7 @@ namespace AD
         public void MyLinkedList_3_RemoveFirst_4_ThrowsExceptionOnGetFirstAdter1Insert()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
 
             // Act
@@ -156,7 +156,7 @@ namespace AD
         public void MyLinkedList_3_RemoveFirst_5_GetFirstOkAfter3Inserts()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             lst.AddFirst("2");
             lst.AddFirst("3");
@@ -174,7 +174,7 @@ namespace AD
         public void MyLinkedList_4_Clear_1_SizeEquals0OnEmptyList()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             int expected = 0;
 
             // Act
@@ -189,7 +189,7 @@ namespace AD
         public void MyLinkedList_4_Clear_2_SizeEquals0OnList1()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             int expected = 0;
 
@@ -205,7 +205,7 @@ namespace AD
         public void MyLinkedList_4_Clear_3_SizeEquals0OnList3()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             lst.AddFirst("2");
             lst.AddFirst("3");
@@ -223,7 +223,7 @@ namespace AD
         public void MyLinkedList_5_Insert_01_ThrowsExceptionOnIndexTooLowOnEmptyList()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
 
             // Act & Assert
             Assert.Throws(typeof(MyLinkedListIndexOutOfRangeException), () => lst.Insert(-1, "1"));
@@ -233,7 +233,7 @@ namespace AD
         public void MyLinkedList_5_Insert_02_ThrowsExceptionOnIndexTooHighOnEmptyList()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
 
             // Act & Assert
             Assert.Throws(typeof(MyLinkedListIndexOutOfRangeException), () => lst.Insert(1, "1"));
@@ -243,7 +243,7 @@ namespace AD
         public void MyLinkedList_5_Insert_03_ThrowsExceptionOnIndexTooLowOnList3()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             lst.AddFirst("2");
             lst.AddFirst("3");
@@ -256,7 +256,7 @@ namespace AD
         public void MyLinkedList_5_Insert_04_ThrowsExceptionOnIndexTooHighOnList3()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             lst.AddFirst("2");
             lst.AddFirst("3");
@@ -269,7 +269,7 @@ namespace AD
         public void MyLinkedList_5_Insert_05_SizeEquals1AfterInsertAtBeginningOnEmptyList()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             int expected = 1;
 
             // Act
@@ -284,7 +284,7 @@ namespace AD
         public void MyLinkedList_5_Insert_06_GetFirstOkAfterInsertAtBeginningOnEmptyList()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             string expected = "1";
 
             // Act
@@ -299,7 +299,7 @@ namespace AD
         public void MyLinkedList_5_Insert_07_SizeEquals4AfterInsertAtBeginningOnList3()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             lst.AddFirst("2");
             lst.AddFirst("3");
@@ -317,7 +317,7 @@ namespace AD
         public void MyLinkedList_5_Insert_08_GetFirstOkAfterInsertAtBeginningOnList3()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             lst.AddFirst("2");
             lst.AddFirst("3");
@@ -335,7 +335,7 @@ namespace AD
         public void MyLinkedList_5_Insert_09_SizeEquals4AfterInsertAtEndOnList3()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             lst.AddFirst("2");
             lst.AddFirst("3");
@@ -353,7 +353,7 @@ namespace AD
         public void MyLinkedList_5_Insert_10_GetFirstOkAfterInsertAtEndOnList3()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             lst.AddFirst("2");
             lst.AddFirst("3");
@@ -371,7 +371,7 @@ namespace AD
         public void MyLinkedList_5_Insert_11_GetLastOkAfterInsertAtEndOnList3()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             lst.AddFirst("2");
             lst.AddFirst("3");
@@ -392,7 +392,7 @@ namespace AD
         public void MyLinkedList_5_Insert_12_SizeEquals4AfterInsertInMiddleOnList3()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             lst.AddFirst("2");
             lst.AddFirst("3");
@@ -410,7 +410,7 @@ namespace AD
         public void MyLinkedList_5_Insert_13_GetFirstOkAfterInsertInMiddleOnList3()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             lst.AddFirst("2");
             lst.AddFirst("3");
@@ -428,7 +428,7 @@ namespace AD
         public void MyLinkedList_5_Insert_14_GetMiddleOkAfterInsertInMiddleOnList3()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             lst.AddFirst("2");
             lst.AddFirst("3");
@@ -447,7 +447,7 @@ namespace AD
         public void MyLinkedList_5_Insert_15_GetLastOkAfterInsertInMiddleOnList3()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             lst.AddFirst("2");
             lst.AddFirst("3");
@@ -468,7 +468,7 @@ namespace AD
         public void MyLinkedList_6_ToString_1_OnEmptyList()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             string expected = "NIL";
 
             // Act
@@ -482,7 +482,7 @@ namespace AD
         public void MyLinkedList_6_ToString_2_OnList3()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             lst.AddFirst("2");
             lst.AddFirst("3");
@@ -499,7 +499,7 @@ namespace AD
         public void MyLinkedList_6_ToString_3_VariousOperations1()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             lst.AddFirst("2");
             lst.AddFirst("3");
@@ -518,7 +518,7 @@ namespace AD
         public void MyLinkedList_6_ToString_4_VariousOperations2()
         {
             // Arrange
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedList();
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             lst.AddFirst("2");
             lst.Insert(1, "4");
@@ -543,7 +543,7 @@ namespace AD
         public void MyLinkedList_7_Internal_1_Constructor()
         {
             // Arrange
-            MyLinkedList<string> lst = (MyLinkedList<string>) DSBuilder.CreateMyLinkedList();
+            MyLinkedList<string> lst = (MyLinkedList<string>) DSBuilder.CreateMyLinkedListStringEmpty();
 
             // Assert
             Assert.IsNull(lst.head);
@@ -553,7 +553,7 @@ namespace AD
         public void MyLinkedList_7_Internal_2_AddFirst()
         {
             // Arrange
-            MyLinkedList<string> lst = (MyLinkedList<string>)DSBuilder.CreateMyLinkedList();
+            MyLinkedList<string> lst = (MyLinkedList<string>)DSBuilder.CreateMyLinkedListStringEmpty();
 
             // Act
             lst.AddFirst("1");
@@ -567,7 +567,7 @@ namespace AD
         public void MyLinkedList_7_Internal_3_Insert()
         {
             // Arrange
-            MyLinkedList<string> lst = (MyLinkedList<string>)DSBuilder.CreateMyLinkedList();
+            MyLinkedList<string> lst = (MyLinkedList<string>)DSBuilder.CreateMyLinkedListStringEmpty();
             lst.AddFirst("1");
             lst.AddFirst("2");
             lst.AddFirst("3");

@@ -6,7 +6,7 @@
     //
     public partial class DSBuilder
     {
-        public static IMyArrayList CreateMyArrayList()
+        public static IMyArrayList CreateMyArrayList5()
         {
             return new MyArrayList(5);
         }

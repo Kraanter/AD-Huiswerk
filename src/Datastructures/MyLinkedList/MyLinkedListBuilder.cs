@@ -6,9 +6,13 @@
     //
     public partial class DSBuilder
     {
-        public static IMyLinkedList<string> CreateMyLinkedList()
+        public static IMyLinkedList<string> CreateMyLinkedListStringEmpty()
         {
             return new MyLinkedList<string>();
+        }
+        public static IMyLinkedList<int> CreateMyLinkedListIntEmpty()
+        {
+            return new MyLinkedList<int>();
         }
     }
 }

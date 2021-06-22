@@ -6,9 +6,13 @@
     //
     public partial class DSBuilder
     {
-        public static IMyQueue<string> CreateMyQueue()
+        public static IMyQueue<string> CreateMyQueueStringEmpty()
         {
             return new MyQueue<string>();
+        }
+        public static IMyQueue<int> CreateMyQueueIntEmpty()
+        {
+            return new MyQueue<int>();
         }
     }
 }

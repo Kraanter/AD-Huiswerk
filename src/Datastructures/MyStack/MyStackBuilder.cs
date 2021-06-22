@@ -6,9 +6,13 @@
     //
     public partial class DSBuilder
     {
-        public static IMyStack<string> CreateMyStack()
+        public static IMyStack<string> CreateMyStackStringEmpty()
         {
             return new MyStack<string>();
+        }
+        public static IMyStack<int> CreateMyStackIntEmpty()
+        {
+            return new MyStack<int>();
         }
     }
 }

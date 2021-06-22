@@ -11,7 +11,7 @@ namespace AD
         public void MyArrayList_1_Constructor5_1_CapacityEquals5()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             int expected = 5;
 
             // Act
@@ -25,7 +25,7 @@ namespace AD
         public void MyArrayList_1_Constructor5_2_SizeEquals0()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             int expected = 0;
 
             // Act
@@ -39,7 +39,7 @@ namespace AD
         public void MyArrayList_2_Add_1_CapacityEquals5()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             int expected = 5;
             lst.Add(3);
 
@@ -54,7 +54,7 @@ namespace AD
         public void MyArrayList_2_Add_2_SizeEquals1()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             int expected = 1;
             lst.Add(3);
 
@@ -69,7 +69,7 @@ namespace AD
         public void MyArrayList_2_Add_3_CapacityAlmostFull()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             int expected = 5;
             lst.Add(3);
             lst.Add(3);
@@ -88,7 +88,7 @@ namespace AD
         public void MyArrayList_2_Add_4_CapacityFull()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             lst.Add(3);
             lst.Add(3);
             lst.Add(3);
@@ -103,7 +103,7 @@ namespace AD
         public void MyArrayList_3_Get_1_GetReturnsProperResult()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             int expected = 2;
             lst.Add(1);
             lst.Add(2);
@@ -121,7 +121,7 @@ namespace AD
         public void MyArrayList_3_Get_2_ThrowsExceptionOnEmptyList()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
 
             // Act & Assert
             Assert.Throws(typeof(MyArrayListIndexOutOfRangeException), () => lst.Get(0));
@@ -131,7 +131,7 @@ namespace AD
         public void MyArrayList_3_Get_3_ThrowsExceptionOnTooLowIndex()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             lst.Add(1);
             lst.Add(2);
 
@@ -143,7 +143,7 @@ namespace AD
         public void MyArrayList_3_Get_4_ThrowsExceptionOnTooHighIndex()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             lst.Add(1);
             lst.Add(2);
 
@@ -155,7 +155,7 @@ namespace AD
         public void MyArrayList_4_Set_1_GetReturnsProperResult()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             int expected = 7;
             lst.Add(1);
             lst.Add(2);
@@ -174,7 +174,7 @@ namespace AD
         public void MyArrayList_4_Set_2_ThrowsExceptionOnEmptyList()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
 
             // Act & Assert
             Assert.Throws(typeof(MyArrayListIndexOutOfRangeException), () => lst.Set(0, 2));
@@ -184,7 +184,7 @@ namespace AD
         public void MyArrayList_4_Set_3_ThrowsExceptionOnTooLowIndex()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
 
             // Act
             lst.Add(1);
@@ -200,7 +200,7 @@ namespace AD
         public void MyArrayList_4_Set_4_ThrowsExceptionOnTooHighIndex()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
 
             // Act
             lst.Add(1);
@@ -214,7 +214,7 @@ namespace AD
         public void MyArrayList_5_Clear_1_CapacityRemainsSame()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             int expected = 5;
             lst.Add(1);
             lst.Add(2);
@@ -233,7 +233,7 @@ namespace AD
         public void MyArrayList_5_Clear_2_SizeEquals0()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             int expected = 0;
             lst.Add(1);
             lst.Add(2);
@@ -252,7 +252,7 @@ namespace AD
         public void MyArrayList_5_Clear_3_GetThrowsExceptionAfterClear()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             lst.Add(1);
             lst.Add(2);
             lst.Clear();
@@ -265,7 +265,7 @@ namespace AD
         public void MyArrayList_5_Clear_4_SetThrowsExceptionAfterClear()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             lst.Add(1);
             lst.Add(2);
             lst.Add(3);
@@ -280,7 +280,7 @@ namespace AD
         public void MyArrayList_6_ToString_1_OnEmptyList()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             String expected = "NIL";
 
             // Act
@@ -294,7 +294,7 @@ namespace AD
         public void MyArrayList_6_ToString_2_OnSingleElement()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             String expected = "[3]";
 
             // Act
@@ -309,7 +309,7 @@ namespace AD
         public void MyArrayList_6_ToString_3_OnFullList()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             String expected = "[1,2,3,4,5]";
 
             // Act
@@ -328,7 +328,7 @@ namespace AD
         public void MyArrayList_6_ToString_4_AfterSet()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             String expected = "[1,2,7,4,5]";
 
             // Act
@@ -348,7 +348,7 @@ namespace AD
         public void MyArrayList_6_ToString_5_AfterClear()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             String expected = "NIL";
 
             // Act
@@ -368,7 +368,7 @@ namespace AD
         public void MyArrayList_7_CountOccurences_1_OnEmptyList()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             int expected = 0;
 
             // Act
@@ -382,7 +382,7 @@ namespace AD
         public void MyArrayList_7_CountOccurences_2_NoOccurences()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             int expected = 0;
 
             // Act
@@ -401,7 +401,7 @@ namespace AD
         public void MyArrayList_7_CountOccurences_3_OneOccurence()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             int expected = 1;
 
             // Act
@@ -420,7 +420,7 @@ namespace AD
         public void MyArrayList_7_CountOccurences_4_MoreOccurences()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             int expected = 3;
 
             // Act
@@ -439,7 +439,7 @@ namespace AD
         public void MyArrayList_8_CountOccurences_5_ReturnsProperResultAfterClean()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             int expected = 0;
 
             // Act
@@ -459,7 +459,7 @@ namespace AD
         public void MyArrayList_8_CountOccurences_5_ReturnsProperResultAfterCleanAndAdd()
         {
             // Arrange
-            IMyArrayList lst = DSBuilder.CreateMyArrayList();
+            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
             int expected = 1;
 
             // Act

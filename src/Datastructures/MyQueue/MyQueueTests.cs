@@ -10,7 +10,7 @@ namespace AD
         public void MyQueue_1_Constructor_1_IsEmptyReturnsTrue()
         {
             // Arrange
-            IMyQueue<string> q = DSBuilder.CreateMyQueue();
+            IMyQueue<string> q = DSBuilder.CreateMyQueueStringEmpty();
             bool expected = true;
 
             // Act
@@ -24,7 +24,7 @@ namespace AD
         public void MyQueue_2_Enqueue_1_IsEmptyReturnsFalse()
         {
             // Arrange
-            IMyQueue<string> stack = DSBuilder.CreateMyQueue();
+            IMyQueue<string> stack = DSBuilder.CreateMyQueueStringEmpty();
             bool expected = false;
 
             // Act
@@ -39,7 +39,7 @@ namespace AD
         public void MyQueue_2_Enqueue_2_GetFrontIsOkAfter1Enqueue()
         {
             // Arrange
-            IMyQueue<string> stack = DSBuilder.CreateMyQueue();
+            IMyQueue<string> stack = DSBuilder.CreateMyQueueStringEmpty();
             string expected = "a";
 
             // Act
@@ -54,7 +54,7 @@ namespace AD
         public void MyQueue_2_Enqueue_3_GetFrontIsOkAfter3Enqueue()
         {
             // Arrange
-            IMyQueue<string> stack = DSBuilder.CreateMyQueue();
+            IMyQueue<string> stack = DSBuilder.CreateMyQueueStringEmpty();
             string expected = "a";
 
             // Act
@@ -71,7 +71,7 @@ namespace AD
         public void MyQueue_2_Enqueue_4_DequeueIsOkAfter1Enqueue()
         {
             // Arrange
-            IMyQueue<string> stack = DSBuilder.CreateMyQueue();
+            IMyQueue<string> stack = DSBuilder.CreateMyQueueStringEmpty();
             string expected = "a";
 
             // Act
@@ -86,7 +86,7 @@ namespace AD
         public void MyQueue_2_Enqueue_5_DequeueIsOkAfter3Enqueue()
         {
             // Arrange
-            IMyQueue<string> stack = DSBuilder.CreateMyQueue();
+            IMyQueue<string> stack = DSBuilder.CreateMyQueueStringEmpty();
             string expected = "a";
 
             // Act
@@ -103,7 +103,7 @@ namespace AD
         public void MyQueue_2_Enqueue_6_TwoTimesDequeueIsOkAfter3Enqueue()
         {
             // Arrange
-            IMyQueue<string> stack = DSBuilder.CreateMyQueue();
+            IMyQueue<string> stack = DSBuilder.CreateMyQueueStringEmpty();
             string expected = "b";
 
             // Act
@@ -121,7 +121,7 @@ namespace AD
         public void MyQueue_3_GetFront_1_ThrowsExceptionOnEmptyStack()
         {
             // Arrange
-            IMyQueue<string> stack = DSBuilder.CreateMyQueue();
+            IMyQueue<string> stack = DSBuilder.CreateMyQueueStringEmpty();
 
             // Act & Assert
             Assert.Throws(typeof(MyQueueEmptyException), () => stack.GetFront());
@@ -131,7 +131,7 @@ namespace AD
         public void MyQueue_3_GetFront_2_IsEmptyReturnsFalseAfterGetFrontOnOneElement()
         {
             // Arrange
-            IMyQueue<string> stack = DSBuilder.CreateMyQueue();
+            IMyQueue<string> stack = DSBuilder.CreateMyQueueStringEmpty();
             bool expected = false;
 
             // Act
@@ -147,7 +147,7 @@ namespace AD
         public void MyQueue_4_Dequeue_1_ThrowsExceptionOnEmptyList()
         {
             // Arrange
-            IMyQueue<string> stack = DSBuilder.CreateMyQueue();
+            IMyQueue<string> stack = DSBuilder.CreateMyQueueStringEmpty();
 
             // Act & Assert
             Assert.Throws(typeof(MyQueueEmptyException), () => stack.Dequeue());
@@ -157,7 +157,7 @@ namespace AD
         public void MyQueue_4_Dequeue_2_IsEmptyReturnsTrueAfterGetFrontOnOneElement()
         {
             // Arrange
-            IMyQueue<string> stack = DSBuilder.CreateMyQueue();
+            IMyQueue<string> stack = DSBuilder.CreateMyQueueStringEmpty();
             bool expected = true;
 
             // Act
