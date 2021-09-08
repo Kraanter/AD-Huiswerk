@@ -546,7 +546,7 @@ namespace AD
             MyLinkedList<string> lst = (MyLinkedList<string>) DSBuilder.CreateMyLinkedListStringEmpty();
 
             // Assert
-            Assert.IsNull(lst.head);
+            Assert.IsNull(lst.first);
         }
 
         [Test]
@@ -559,8 +559,8 @@ namespace AD
             lst.AddFirst("1");
 
             // Assert
-            Assert.IsNotNull(lst.head);
-            Assert.IsNull(lst.head.next);
+            Assert.IsNotNull(lst.first);
+            Assert.IsNull(lst.first.next);
         }
 
         [Test]
@@ -576,11 +576,11 @@ namespace AD
             lst.Insert(1, "4");
 
             // Assert
-            Assert.IsNotNull(lst.head);
-            Assert.IsNotNull(lst.head.next);
-            Assert.IsNotNull(lst.head.next.next);
-            Assert.IsNotNull(lst.head.next.next.next);
-            Assert.IsNull(lst.head.next.next.next.next);
+            Assert.IsNotNull(lst.first);
+            Assert.IsNotNull(lst.first.next);
+            Assert.IsNotNull(lst.first.next.next);
+            Assert.IsNotNull(lst.first.next.next.next);
+            Assert.IsNull(lst.first.next.next.next.next);
         }
 
 
