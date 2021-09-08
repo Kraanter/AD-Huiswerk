@@ -1,17 +1,17 @@
 namespace AD
 {
-    public partial class FCNSNode<T> : IFCNSNode<T>
+    public partial class FirstChildNextSiblingNode<T> : IFirstChildNextSiblingNode<T>
     {
-        public FCNSNode<T> firstChild;
-        public FCNSNode<T> nextSibling;
+        public FirstChildNextSiblingNode<T> firstChild;
+        public FirstChildNextSiblingNode<T> nextSibling;
         public T data;
 
-        public FCNSNode(T data, FCNSNode<T> firstChild, FCNSNode<T> nextSibling)
+        public FirstChildNextSiblingNode(T data, FirstChildNextSiblingNode<T> firstChild, FirstChildNextSiblingNode<T> nextSibling)
         {
             throw new System.NotImplementedException();
         }
 
-        public FCNSNode(T data)
+        public FirstChildNextSiblingNode(T data)
         {
             throw new System.NotImplementedException();
         }
@@ -21,12 +21,12 @@ namespace AD
             throw new System.NotImplementedException();
         }
 
-        public FCNSNode<T> GetFirstChild()
+        public FirstChildNextSiblingNode<T> GetFirstChild()
         {
             throw new System.NotImplementedException();
         }
 
-        public FCNSNode<T> GetNextSibling()
+        public FirstChildNextSiblingNode<T> GetNextSibling()
         {
             throw new System.NotImplementedException();
         }

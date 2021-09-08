@@ -1,9 +1,9 @@
 namespace AD
 {
-    public partial interface IFCNSNode<T>
+    public partial interface IFirstChildNextSiblingNode<T>
     {
         T GetData();
-        FCNSNode<T> GetFirstChild();
-        FCNSNode<T> GetNextSibling();
+        FirstChildNextSiblingNode<T> GetFirstChild();
+        FirstChildNextSiblingNode<T> GetNextSibling();
     }
 }

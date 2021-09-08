@@ -2,9 +2,9 @@ namespace AD
 {
     public partial class FirstChildNextSibling<T> : IFirstChildNextSibling<T>
     {
-        public FCNSNode<T> root;
+        public FirstChildNextSiblingNode<T> root;
 
-        public IFCNSNode<T> GetRoot()
+        public IFirstChildNextSiblingNode<T> GetRoot()
         {
             return root;
         }

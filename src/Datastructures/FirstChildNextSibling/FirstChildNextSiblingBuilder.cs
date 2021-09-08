@@ -16,10 +16,10 @@ namespace AD
         {
             FirstChildNextSibling<string> tree = new FirstChildNextSibling<string> ();
 
-            FCNSNode<string> d = new FCNSNode<string> ("d");
-            FCNSNode<string> c = new FCNSNode<string> ("c");
-            FCNSNode<string> b = new FCNSNode<string> ("b", d, c);
-            FCNSNode<string> a = new FCNSNode<string> ("a", b, null);
+            FirstChildNextSiblingNode<string> d = new FirstChildNextSiblingNode<string> ("d");
+            FirstChildNextSiblingNode<string> c = new FirstChildNextSiblingNode<string> ("c");
+            FirstChildNextSiblingNode<string> b = new FirstChildNextSiblingNode<string> ("b", d, c);
+            FirstChildNextSiblingNode<string> a = new FirstChildNextSiblingNode<string> ("a", b, null);
 
             tree.root = a;
 
