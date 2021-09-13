@@ -139,7 +139,7 @@ namespace AD
         }
 
         [Test]
-        public void MyLinkedList_3_RemoveFirst_4_ThrowsExceptionOnGetFirstAdter1Insert()
+        public void MyLinkedList_3_RemoveFirst_4_ThrowsExceptionOnGetFirstAfter1Insert()
         {
             // Arrange
             IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
