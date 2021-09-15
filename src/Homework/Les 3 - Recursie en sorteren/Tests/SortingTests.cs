@@ -10,7 +10,7 @@ namespace AD
         [Test, Combinatorial]
         public void Sort(
                     [Values("InsertionSort", "MergeSort", "ShellSort")] string sorterName,
-                    [Values(0, 10, 300)] int n)
+                    [Values(0, 1, 2, 10, 3000)] int n)
         {
             List<int> list = new List<int>();
             List<int> listCopy;
