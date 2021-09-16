@@ -1,6 +1,6 @@
 namespace AD
 {
-    public partial class BinaryNode<T>
+    public partial class BinaryNode<T> : IBinaryNode<T>
     {
         public T data;
         public BinaryNode<T> left;
@@ -13,6 +13,24 @@ namespace AD
             this.data = data;
             this.left = left;
             this.right = right;
+        }
+
+        //----------------------------------------------------------------------
+        // Interface methods that have to be implemented for exam
+        //----------------------------------------------------------------------
+        public T GetData()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public BinaryNode<T> GetLeft()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public BinaryNode<T> GetRight()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

@@ -10,6 +10,7 @@
     <Compile Include="..\..\..\Datastructures\BinaryTree\BinaryNode.cs" Link="BinaryTree\BinaryNode.cs" />
     <Compile Include="..\..\..\Datastructures\BinaryTree\BinaryTree.cs" Link="BinaryTree\BinaryTree.cs" />
     <Compile Include="..\..\..\Datastructures\BinaryTree\BinaryTreeBuilder.cs" Link="BinaryTree\BinaryTreeBuilder.cs" />
+    <Compile Include="..\..\..\Datastructures\BinaryTree\IBinaryNode.cs" Link="BinaryTree\IBinaryNode.cs" />
     <Compile Include="..\..\..\Datastructures\BinaryTree\IBinaryTree.cs" Link="BinaryTree\IBinaryTree.cs" />
     <Compile Include="..\..\..\Datastructures\FirstChildNextSibling\FirstChildNextSiblingBuilder.cs" Link="FirstChildNextSibling\FirstChildNextSiblingBuilder.cs" />
     <Compile Include="..\..\..\Datastructures\FirstChildNextSibling\FirstChildNextSiblingNode.cs" Link="FirstChildNextSibling\FirstChildNextSiblingNode.cs" />

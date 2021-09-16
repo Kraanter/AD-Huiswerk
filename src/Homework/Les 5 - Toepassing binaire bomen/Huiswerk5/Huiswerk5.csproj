@@ -12,6 +12,7 @@
     <Compile Include="..\..\..\Datastructures\BinarySearchTree\IBinarySearchTree.cs" Link="BinarySearchTree\IBinarySearchTree.cs" />
     <Compile Include="..\..\..\Datastructures\BinaryTree\BinaryNode.cs" Link="BinaryTree\BinaryNode.cs" />
     <Compile Include="..\..\..\Datastructures\BinaryTree\BinaryTree.cs" Link="BinaryTree\BinaryTree.cs" />
+    <Compile Include="..\..\..\Datastructures\BinaryTree\IBinaryNode.cs" Link="BinaryTree\IBinaryNode.cs" />
     <Compile Include="..\..\..\Datastructures\BinaryTree\IBinaryTree.cs" Link="BinaryTree\IBinaryTree.cs" />
     <Compile Include="..\..\..\Datastructures\PriorityQueue\IPriorityQueue.cs" Link="PriorityQueue\IPriorityQueue.cs" />
     <Compile Include="..\..\..\Datastructures\PriorityQueue\PriorityQueue.cs" Link="PriorityQueue\PriorityQueue.cs" />
