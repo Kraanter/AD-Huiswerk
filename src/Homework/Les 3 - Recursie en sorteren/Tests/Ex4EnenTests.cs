@@ -11,6 +11,7 @@ namespace AD
         [TestCase(9, 2)]
         [TestCase(15, 4)]
         [TestCase(16, 1)]
+        [TestCase(255, 8)]
         [TestCase(1024, 1)]
         public void Enen(int n, int expected)
         {
