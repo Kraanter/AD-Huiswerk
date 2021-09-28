@@ -20,6 +20,7 @@ namespace AD
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
         [Test]
         public void BinarySearchTree_01_Insert_02_After1Insert_SizeEquals1()
         {
@@ -34,6 +35,7 @@ namespace AD
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
         [Test]
         public void BinarySearchTree_01_Insert_03_After1Insert_HeightEquals0()
         {
@@ -48,6 +50,7 @@ namespace AD
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
         [Test]
         public void BinarySearchTree_01_Insert_04_After3AscendingInserts_ToInfixStringCorrect()
         {
@@ -64,6 +67,7 @@ namespace AD
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
         [Test]
         public void BinarySearchTree_01_Insert_05_After3DescendingInserts_ToInfixStringCorrect()
         {
@@ -80,6 +84,7 @@ namespace AD
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
         [Test]
         public void BinarySearchTree_01_Insert_06_After3UnorderedInserts_ToInfixStringCorrect()
         {
@@ -96,13 +101,13 @@ namespace AD
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
         [Test]
         public void BinarySearchTree_01_Insert_07_After13UnorderedInserts_ToInfixStringCorrect()
         {
             // Arrange
             IBinarySearchTree<int> tree = DSBuilder.CreateBinarySearchTreeIntEmpty();
             string expected = "[ [ NIL 3 [ [ NIL 7 NIL ] 8 [ NIL 12 NIL ] ] ] 17 [ [ NIL 24 NIL ] 26 [ NIL 32 [ [ NIL 34 [ [ NIL 37 NIL ] 42 NIL ] ] 45 [ NIL 50 NIL ] ] ] ] ]";
-            
 
             // Act
             tree.Insert(17);
@@ -123,15 +128,17 @@ namespace AD
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
         [Test]
         public void BinarySearchTree_02_FindMin_01_OnEmptyTree()
         {
             // Arrange
             IBinarySearchTree<int> tree = DSBuilder.CreateBinarySearchTreeIntEmpty();
-            
-           // Act & Assert
+
+            // Act & Assert
             Assert.Throws(typeof(BinarySearchTreeEmptyException), () => tree.FindMin());
         }
+
         [Test]
         public void BinarySearchTree_02_FindMin_02_OnTree1Element()
         {
@@ -141,10 +148,11 @@ namespace AD
 
             // Act
             int actual = tree.FindMin();
-            
-           // Act & Assert
+
+            // Act & Assert
             Assert.AreEqual(expected, actual);
         }
+
         [Test]
         public void BinarySearchTree_02_FindMin_03_OnSmallIntTree()
         {
@@ -154,10 +162,11 @@ namespace AD
 
             // Act
             int actual = tree.FindMin();
-            
-           // Act & Assert
+
+            // Act & Assert
             Assert.AreEqual(expected, actual);
         }
+
         [Test]
         public void BinarySearchTree_02_FindMin_04_OnModerateIntTree()
         {
@@ -167,19 +176,21 @@ namespace AD
 
             // Act
             int actual = tree.FindMin();
-            
-           // Act & Assert
+
+            // Act & Assert
             Assert.AreEqual(expected, actual);
         }
+
         [Test]
         public void BinarySearchTree_03_RemoveMin_01_OnEmptyTree()
         {
             // Arrange
             IBinarySearchTree<int> tree = DSBuilder.CreateBinarySearchTreeIntEmpty();
-            
-           // Act & Assert
+
+            // Act & Assert
             Assert.Throws(typeof(BinarySearchTreeEmptyException), () => tree.RemoveMin());
         }
+
         [Test]
         public void BinarySearchTree_03_RemoveMin_02_OnTree1Element()
         {
@@ -194,6 +205,7 @@ namespace AD
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
         [Test]
         public void BinarySearchTree_03_RemoveMin_03_OnSmallIntTree()
         {
@@ -208,6 +220,7 @@ namespace AD
             // Assert
             Assert.AreEqual(expected, actual);
         }
+        
         [Test]
         public void BinarySearchTree_03_RemoveMin_04_OnModerateIntTree()
         {
@@ -223,29 +236,28 @@ namespace AD
             Assert.AreEqual(expected, actual);
         }
 
-
         [Test]
         public void BinarySearchTree_04_Remove_01_OnEmptyTree()
         {
             // Arrange
             IBinarySearchTree<int> tree = DSBuilder.CreateBinarySearchTreeIntEmpty();
-            
 
             // Act & Assert
             Assert.Throws(typeof(BinarySearchTreeElementNotFoundException), () => tree.Remove(1));
         }
+
         [Test]
         public void BinarySearchTree_04_Remove_02_OnNonEmptyTree_ElementNotExisting()
         {
             // Arrange
             IBinarySearchTree<int> tree = DSBuilder.CreateBinarySearchTreeIntModerate();
-            
 
             // Act & Assert
             Assert.Throws(typeof(BinarySearchTreeElementNotFoundException), () => tree.Remove(40));
         }
+
         [Test]
-        public void BinarySearchTree_04_Remove_03_OnNonEmptyTree_LeafElement()
+        public void BinarySearchTree_04_Remove_03_OnNonEmptyTree_LeafElement_12()
         {
             // Arrange
             IBinarySearchTree<int> tree = DSBuilder.CreateBinarySearchTreeIntModerate();
@@ -258,6 +270,22 @@ namespace AD
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public void BinarySearchTree_04_Remove_03_OnNonEmptyTree_LeafElement_37()
+        {
+            // Arrange
+            IBinarySearchTree<int> tree = DSBuilder.CreateBinarySearchTreeIntModerate();
+            string expected = "[ [ NIL 3 [ [ NIL 7 NIL ] 8 [ NIL 12 NIL ] ] ] 17 [ [ NIL 24 NIL ] 26 [ NIL 32 [ [ NIL 34 [ NIL 42 NIL ] ] 45 [ NIL 50 NIL ] ] ] ] ]";
+
+            // Act
+            tree.Remove(37);
+            string actual = tree.ToInfixString();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
         [Test]
         public void BinarySearchTree_04_Remove_04_OnNonEmptyTree_ElementWithLeftChild()
         {
@@ -272,22 +300,9 @@ namespace AD
             // Assert
             Assert.AreEqual(expected, actual);
         }
-        [Test]
-        public void BinarySearchTree_04_Remove_05_OnNonEmptyTree_ElementWithRightChild()
-        {
-            // Arrange
-            IBinarySearchTree<int> tree = DSBuilder.CreateBinarySearchTreeIntModerate();
-            string expected = "[ [ NIL 3 [ [ NIL 7 NIL ] 8 [ NIL 12 NIL ] ] ] 17 [ [ NIL 24 NIL ] 26 [ NIL 32 [ [ [ NIL 37 NIL ] 42 NIL ] 45 [ NIL 50 NIL ] ] ] ] ]";
 
-            // Act
-            tree.Remove(34);
-            string actual = tree.ToInfixString();
-
-            // Assert
-            Assert.AreEqual(expected, actual);
-        }
         [Test]
-        public void BinarySearchTree_04_Remove_06_OnNonEmptyTree_ElementWithBothChilds()
+        public void BinarySearchTree_04_Remove_05_OnNonEmptyTree_ElementWithRightChild32()
         {
             // Arrange
             IBinarySearchTree<int> tree = DSBuilder.CreateBinarySearchTreeIntModerate();
@@ -300,6 +315,67 @@ namespace AD
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public void BinarySearchTree_04_Remove_05_OnNonEmptyTree_ElementWithRightChild34()
+        {
+            // Arrange
+            IBinarySearchTree<int> tree = DSBuilder.CreateBinarySearchTreeIntModerate();
+            string expected = "[ [ NIL 3 [ [ NIL 7 NIL ] 8 [ NIL 12 NIL ] ] ] 17 [ [ NIL 24 NIL ] 26 [ NIL 32 [ [ [ NIL 37 NIL ] 42 NIL ] 45 [ NIL 50 NIL ] ] ] ] ]";
+
+            // Act
+            tree.Remove(34);
+            string actual = tree.ToInfixString();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void BinarySearchTree_04_Remove_06_OnNonEmptyTree_ElementWithBothChilds17()
+        {
+            // Arrange
+            IBinarySearchTree<int> tree = DSBuilder.CreateBinarySearchTreeIntModerate();
+            string expected = "[ [ NIL 3 [ [ NIL 7 NIL ] 8 [ NIL 12 NIL ] ] ] 24 [ NIL 26 [ NIL 32 [ [ NIL 34 [ [ NIL 37 NIL ] 42 NIL ] ] 45 [ NIL 50 NIL ] ] ] ] ]";
+
+            // Act
+            tree.Remove(17);
+            string actual = tree.ToInfixString();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void BinarySearchTree_04_Remove_06_OnNonEmptyTree_ElementWithBothChilds26()
+        {
+            // Arrange
+            IBinarySearchTree<int> tree = DSBuilder.CreateBinarySearchTreeIntModerate();
+            string expected = "[ [ NIL 3 [ [ NIL 7 NIL ] 8 [ NIL 12 NIL ] ] ] 17 [ [ NIL 24 NIL ] 32 [ [ NIL 34 [ [ NIL 37 NIL ] 42 NIL ] ] 45 [ NIL 50 NIL ] ] ] ]";
+
+            // Act
+            tree.Remove(26);
+            string actual = tree.ToInfixString();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void BinarySearchTree_04_Remove_06_OnNonEmptyTree_ElementWithBothChilds45()
+        {
+            // Arrange
+            IBinarySearchTree<int> tree = DSBuilder.CreateBinarySearchTreeIntModerate();
+            string expected = "[ [ NIL 3 [ [ NIL 7 NIL ] 8 [ NIL 12 NIL ] ] ] 17 [ [ NIL 24 NIL ] 26 [ NIL 32 [ [ NIL 34 [ [ NIL 37 NIL ] 42 NIL ] ] 50 NIL ] ] ] ]";
+
+            // Act
+            tree.Remove(45);
+            string actual = tree.ToInfixString();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
         [Test]
         public void BinarySearchTree_05_ToString_01_OnEmptyTree()
         {
