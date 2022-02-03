@@ -7,19 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\..\Datastructures\MyArrayList\IMyArrayList.cs" Link="MyArrayList\IMyArrayList.cs" />
-    <Compile Include="..\..\..\Datastructures\MyArrayList\MyArrayList.cs" Link="MyArrayList\MyArrayList.cs" />
-    <Compile Include="..\..\..\Datastructures\MyArrayList\MyArrayListBuilder.cs" Link="MyArrayList\MyArrayListBuilder.cs" />
-    <Compile Include="..\..\..\Datastructures\MyLinkedList\IMyLinkedList.cs" Link="MyLinkedList\IMyLinkedList.cs" />
-    <Compile Include="..\..\..\Datastructures\MyLinkedList\MyLinkedList.cs" Link="MyLinkedList\MyLinkedList.cs" />
-    <Compile Include="..\..\..\Datastructures\MyLinkedList\MyLinkedListBuilder.cs" Link="MyLinkedList\MyLinkedListBuilder.cs" />
-    <Compile Include="..\..\..\Datastructures\MyLinkedList\MyLinkedListNode.cs" Link="MyLinkedList\MyLinkedListNode.cs" />
-    <Compile Include="..\..\..\Datastructures\MyQueue\IMyQueue.cs" Link="MyQueue\IMyQueue.cs" />
-    <Compile Include="..\..\..\Datastructures\MyQueue\MyQueue.cs" Link="MyQueue\MyQueue.cs" />
-    <Compile Include="..\..\..\Datastructures\MyQueue\MyQueueBuilder.cs" Link="MyQueue\MyQueueBuilder.cs" />
-    <Compile Include="..\..\..\Datastructures\MyStack\IMyStack.cs" Link="MyStack\IMyStack.cs" />
-    <Compile Include="..\..\..\Datastructures\MyStack\MyStack.cs" Link="MyStack\MyStack.cs" />
-    <Compile Include="..\..\..\Datastructures\MyStack\MyStackBuilder.cs" Link="MyStack\MyStackBuilder.cs" />
+    <Compile Include="..\..\..\datastructures\MyArrayList\IMyArrayList.cs" Link="MyArrayList\IMyArrayList.cs" />
+    <Compile Include="..\..\..\datastructures\MyArrayList\MyArrayList.cs" Link="MyArrayList\MyArrayList.cs" />
+    <Compile Include="..\..\..\datastructures\MyArrayList\MyArrayListBuilder.cs" Link="MyArrayList\MyArrayListBuilder.cs" />
+    <Compile Include="..\..\..\datastructures\MyLinkedList\IMyLinkedList.cs" Link="MyLinkedList\IMyLinkedList.cs" />
+    <Compile Include="..\..\..\datastructures\MyLinkedList\MyLinkedList.cs" Link="MyLinkedList\MyLinkedList.cs" />
+    <Compile Include="..\..\..\datastructures\MyLinkedList\MyLinkedListBuilder.cs" Link="MyLinkedList\MyLinkedListBuilder.cs" />
+    <Compile Include="..\..\..\datastructures\MyLinkedList\MyLinkedListNode.cs" Link="MyLinkedList\MyLinkedListNode.cs" />
+    <Compile Include="..\..\..\datastructures\MyQueue\IMyQueue.cs" Link="MyQueue\IMyQueue.cs" />
+    <Compile Include="..\..\..\datastructures\MyQueue\MyQueue.cs" Link="MyQueue\MyQueue.cs" />
+    <Compile Include="..\..\..\datastructures\MyQueue\MyQueueBuilder.cs" Link="MyQueue\MyQueueBuilder.cs" />
+    <Compile Include="..\..\..\datastructures\MyStack\IMyStack.cs" Link="MyStack\IMyStack.cs" />
+    <Compile Include="..\..\..\datastructures\MyStack\MyStack.cs" Link="MyStack\MyStack.cs" />
+    <Compile Include="..\..\..\datastructures\MyStack\MyStackBuilder.cs" Link="MyStack\MyStackBuilder.cs" />
   </ItemGroup>
 
   <ItemGroup>

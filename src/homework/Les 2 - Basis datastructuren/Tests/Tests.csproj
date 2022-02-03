@@ -8,10 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\..\Datastructures\MyArrayList\MyArrayListTests.cs" Link="MyArrayListTests.cs" />
-    <Compile Include="..\..\..\Datastructures\MyLinkedList\MyLinkedListTests.cs" Link="MyLinkedListTests.cs" />
-    <Compile Include="..\..\..\Datastructures\MyQueue\MyQueueTests.cs" Link="MyQueueTests.cs" />
-    <Compile Include="..\..\..\Datastructures\MyStack\MyStackTests.cs" Link="MyStackTests.cs" />
+    <Compile Include="..\..\..\datastructures\MyArrayList\MyArrayListTests.cs" Link="MyArrayListTests.cs" />
+    <Compile Include="..\..\..\datastructures\MyLinkedList\MyLinkedListTests.cs" Link="MyLinkedListTests.cs" />
+    <Compile Include="..\..\..\datastructures\MyQueue\MyQueueTests.cs" Link="MyQueueTests.cs" />
+    <Compile Include="..\..\..\datastructures\MyStack\MyStackTests.cs" Link="MyStackTests.cs" />
   </ItemGroup>
 
   <ItemGroup>

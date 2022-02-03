@@ -8,7 +8,7 @@
 </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\..\Utils\TestUtils.cs" Link="TestUtils.cs" />
+    <Compile Include="..\..\..\utils\TestUtils.cs" Link="TestUtils.cs" />
   </ItemGroup>
 
   <ItemGroup>
