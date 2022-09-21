@@ -12,7 +12,6 @@
     <Compile Include="..\..\..\algorithms\sorters\QuickSort.cs" Link="sorters\QuickSort.cs" />
     <Compile Include="..\..\..\algorithms\sorters\ShellSort.cs" Link="sorters\ShellSort.cs" />
     <Compile Include="..\..\..\algorithms\sorters\Sorter.cs" Link="sorters\Sorter.cs" />
-    <Compile Include="..\..\..\algorithms\sorters\SorterBuilder.cs" Link="sorters\SorterBuilder.cs" />
   </ItemGroup>
 
 </Project>
