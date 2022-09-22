@@ -35,7 +35,7 @@ namespace AD
         {
             // Arrange
             IFirstChildNextSibling<string> tree = DSBuilder.CreateFirstChildNextSibling_Small();
-            int expected = 4;
+            int expected = 5;
 
             // Act
             int actual = tree.Size();
@@ -47,7 +47,7 @@ namespace AD
         {
             // Arrange
             IFirstChildNextSibling<string> tree = DSBuilder.CreateFirstChildNextSibling_Small();
-            string expected = "a,FC(b,FC(d),NS(c))";
+            string expected = "a,FC(b,FC(e),NS(c,NS(d)))";
 
             // Act
             string actual = tree.ToString();
