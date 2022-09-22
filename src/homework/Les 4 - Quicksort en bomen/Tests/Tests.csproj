@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -8,14 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="..\..\..\algorithms\sorters\SorterBuilder.cs" Link="SorterBuilder.cs" />
+    <Compile Include="..\..\..\datastructures\BinaryTree\BinaryTreeBuilder.cs" Link="BinaryTreeBuilder.cs" />
     <Compile Include="..\..\..\datastructures\BinaryTree\BinaryTreeTests.cs" Link="BinaryTreeTests.cs" />
+    <Compile Include="..\..\..\datastructures\FirstChildNextSibling\FirstChildNextSiblingBuilder.cs" Link="FirstChildNextSiblingBuilder.cs" />
     <Compile Include="..\..\..\datastructures\FirstChildNextSibling\FirstChildNextSiblingTests.cs" Link="FirstChildNextSiblingTests.cs" />
   </ItemGroup>
   
   <ItemGroup>
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0"/>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
   </ItemGroup>
 
   <ItemGroup>

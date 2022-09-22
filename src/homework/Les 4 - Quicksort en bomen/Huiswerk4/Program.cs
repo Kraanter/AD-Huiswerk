@@ -2,6 +2,90 @@
 {
     class Program
     {
+        //
+        //  a
+        //  |
+        //  b -- c -- d
+        //  |
+        //  e
+        //
+        public static FirstChildNextSibling<string> CreateFirstTreeNextSibling_Small()
+        {
+            FirstChildNextSibling<string> tree = new FirstChildNextSibling<string>();
+            FirstChildNextSiblingNode<string> e = new FirstChildNextSiblingNode<string>("e");
+            FirstChildNextSiblingNode<string> d = new FirstChildNextSiblingNode<string>("d");
+            FirstChildNextSiblingNode<string> c = new FirstChildNextSiblingNode<string>("c", null, d);
+            FirstChildNextSiblingNode<string> b = new FirstChildNextSiblingNode<string>("b", e, c);
+            FirstChildNextSiblingNode<string> a = new FirstChildNextSiblingNode<string>("a", b, null);
+            tree.root = a;
+            return tree;
+        }
+
+        //
+        //         5
+        //       /   \
+        //     2       6
+        //    / \
+        //   8   7
+        //      /
+        //     1
+        //
+        public static BinaryTree<int> CreateBinaryTree_Int()
+        {
+            BinaryTree<int> t8 = new BinaryTree<int>(8);
+            BinaryTree<int> t1 = new BinaryTree<int>(1);
+            BinaryTree<int> tnil = new BinaryTree<int>();
+            BinaryTree<int> t7 = new BinaryTree<int>();
+            BinaryTree<int> t2 = new BinaryTree<int>();
+            BinaryTree<int> t5 = new BinaryTree<int>();
+            BinaryTree<int> t6 = new BinaryTree<int>(6);
+
+            t7.Merge(7, t1, tnil);
+            t2.Merge(2, t8, t7);
+            t5.Merge(5, t2, t6);
+
+            return t5;
+        }
+
+        //
+        //         t
+        //       /   \
+        //     w       a
+        //    / \     / \
+        //   q   g   o   p
+        public static BinaryTree<string> CreateBinaryTree_String()
+        {
+            BinaryTree<string> tq = new BinaryTree<string>("q");
+            BinaryTree<string> tg = new BinaryTree<string>("g");
+            BinaryTree<string> to = new BinaryTree<string>("o");
+            BinaryTree<string> tp = new BinaryTree<string>("p");
+            BinaryTree<string> tw = new BinaryTree<string>();
+            BinaryTree<string> tt = new BinaryTree<string>();
+            BinaryTree<string> ta = new BinaryTree<string>();
+
+            tw.Merge("w", tq, tg);
+            ta.Merge("a", to, tp);
+            tt.Merge("t", tw, ta);
+
+            return tt;
+        }
+
+        public static void PrintBinaryTreeInfo<T>(BinaryTree<T> tree)
+        {
+            System.Console.WriteLine("Size            : {0}", tree.Size());
+            System.Console.WriteLine("Height          : {0}", tree.Height());
+            System.Console.WriteLine("ToPrefixString  : {0}", tree.ToPrefixString());
+            System.Console.WriteLine("ToInfixString   : {0}", tree.ToInfixString());
+            System.Console.WriteLine("ToPostfixString : {0}", tree.ToPostfixString());
+        }
+
+        public static void PrintBinaryTreeMoreInfo<T>(BinaryTree<T> tree)
+        {
+            System.Console.WriteLine("NumberOfLeaves               : {0}", tree.NumberOfLeaves());
+            System.Console.WriteLine("NumberOfNodesWithOneChild    : {0}", tree.NumberOfNodesWithOneChild());
+            System.Console.WriteLine("NumberOfNodesWithTwoChildren : {0}", tree.NumberOfNodesWithTwoChildren());
+        }
+
         static void Opgave1()
         {
             System.Console.WriteLine("\n=====   Opgave 1 : QuickSort   =====\n");
@@ -27,84 +111,62 @@
         {
             System.Console.WriteLine("\n=====   Opgave 2 : FirstChildNextSibling   =====\n");
 
-            IFirstChildNextSibling<string> tree;
+            FirstChildNextSibling<string> tree;
 
             // Empty tree
-            tree = DSBuilder.CreateFirstChildNextSibling_Empty();
+            System.Console.WriteLine("--- Empty tree ---");
+            tree = new FirstChildNextSibling<string>();
             tree.PrintPreOrder();
-            System.Console.WriteLine("Size: {0}", tree.Size());
-            System.Console.WriteLine(tree);
+            System.Console.WriteLine("Size     : {0}", tree.Size());
+            System.Console.WriteLine("ToString : {0}", tree);
 
             // Small tree
-            tree = DSBuilder.CreateFirstChildNextSibling_Small();
+            System.Console.WriteLine("\n--- Small tree ---");
+            tree = CreateFirstTreeNextSibling_Small();
             tree.PrintPreOrder();
-            System.Console.WriteLine("Size: {0}", tree.Size());
-            System.Console.WriteLine(tree);
-
-            // Tree from figure 18.3
-            tree = DSBuilder.CreateFirstChildNextSibling_18_3();
-            tree.PrintPreOrder();
-            System.Console.WriteLine("Size: {0}", tree.Size());
-            System.Console.WriteLine(tree);
+            System.Console.WriteLine("Size     : {0}", tree.Size());
+            System.Console.WriteLine("ToString : {0}", tree);
         }
 
         static void Opgave3()
         {
             System.Console.WriteLine("\n=====   Opgave 3 : BinaryTree   =====\n");
 
-            IBinaryTree<int> intTree;
-            IBinaryTree<string> stringTree;
-
             // Empty tree
-            intTree = DSBuilder.CreateBinaryTreeEmpty();
-            System.Console.WriteLine(intTree.Size());
-            System.Console.WriteLine(intTree.Height());
-            System.Console.WriteLine(intTree.ToPrefixString());
-            System.Console.WriteLine(intTree.ToInfixString());
-            System.Console.WriteLine(intTree.ToPostfixString());
+            System.Console.WriteLine("--- Empty tree ---");
+            BinaryTree<int> emptyTree = new BinaryTree<int>();
+            PrintBinaryTreeInfo(emptyTree);
 
             // Int tree
-            intTree = DSBuilder.CreateBinaryTreeInt();
-            System.Console.WriteLine(intTree.Size());
-            System.Console.WriteLine(intTree.Height());
-            System.Console.WriteLine(intTree.ToPrefixString());
-            System.Console.WriteLine(intTree.ToInfixString());
-            System.Console.WriteLine(intTree.ToPostfixString());
-            System.Console.WriteLine(intTree.NumberOfNodesWithOneChild());
+            System.Console.WriteLine("\n--- Int tree ---");
+            BinaryTree<int> intTree = CreateBinaryTree_Int();
+            PrintBinaryTreeInfo(intTree);
 
             // String tree
-            stringTree = DSBuilder.CreateBinaryTreeString();
-            System.Console.WriteLine(stringTree.Size());
-            System.Console.WriteLine(stringTree.Height());
-            System.Console.WriteLine(stringTree.ToPrefixString());
-            System.Console.WriteLine(stringTree.ToInfixString());
-            System.Console.WriteLine(stringTree.ToPostfixString());
+            System.Console.WriteLine("\n--- String tree ---");
+            BinaryTree<string> stringTree = CreateBinaryTree_String();
+            PrintBinaryTreeInfo(stringTree);
         }
 
         static void Opgave4()
         {
             System.Console.WriteLine("\n=====   Opgave 4 : NumberOfNodes   =====\n");
 
-            IBinaryTree<int> intTree;
-            IBinaryTree<string> stringTree;
-
             // Empty tree
-            intTree = DSBuilder.CreateBinaryTreeEmpty();
-            System.Console.WriteLine(intTree.NumberOfLeaves());
-            System.Console.WriteLine(intTree.NumberOfNodesWithOneChild());
-            System.Console.WriteLine(intTree.NumberOfNodesWithTwoChildren());
+            System.Console.WriteLine("--- Empty tree ---");
+            BinaryTree<int> emptyTree = new BinaryTree<int>();
+            PrintBinaryTreeMoreInfo(emptyTree);
 
             // Int tree
-            intTree = DSBuilder.CreateBinaryTreeInt();
-            System.Console.WriteLine(intTree.NumberOfLeaves());
-            System.Console.WriteLine(intTree.NumberOfNodesWithOneChild());
-            System.Console.WriteLine(intTree.NumberOfNodesWithTwoChildren());
+            System.Console.WriteLine("\n--- Int tree ---");
+            BinaryTree<int> intTree = CreateBinaryTree_Int();
+            PrintBinaryTreeMoreInfo(intTree);
 
             // String tree
-            stringTree = DSBuilder.CreateBinaryTreeString();
-            System.Console.WriteLine(stringTree.NumberOfLeaves());
-            System.Console.WriteLine(stringTree.NumberOfNodesWithOneChild());
-            System.Console.WriteLine(stringTree.NumberOfNodesWithTwoChildren());
+            System.Console.WriteLine("\n--- String tree ---");
+            BinaryTree<string> stringTree = CreateBinaryTree_String();
+            PrintBinaryTreeMoreInfo(stringTree);
+
         }
 
         static void Main(string[] args)
