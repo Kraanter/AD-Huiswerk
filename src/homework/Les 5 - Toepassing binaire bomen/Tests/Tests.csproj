@@ -8,14 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="..\..\..\datastructures\BinarySearchTree\BinarySearchTreeBuilder.cs" Link="BinarySearchTreeBuilder.cs" />
     <Compile Include="..\..\..\datastructures\BinarySearchTree\BinarySearchTreeTests.cs" Link="BinarySearchTreeTests.cs" />
+    <Compile Include="..\..\..\datastructures\PriorityQueue\PriorityQueueBuilder.cs" Link="PriorityQueueBuilder.cs" />
     <Compile Include="..\..\..\datastructures\PriorityQueue\PriorityQueueTests.cs" Link="PriorityQueueTests.cs" />
   </ItemGroup>
   
   <ItemGroup>
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0"/>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
   </ItemGroup>
 
   <ItemGroup>

@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Compile Include="..\..\..\datastructures\BinarySearchTree\BinarySearchTree.cs" Link="BinarySearchTree\BinarySearchTree.cs" />
-    <Compile Include="..\..\..\datastructures\BinarySearchTree\BinarySearchTreeBuilder.cs" Link="BinarySearchTree\BinarySearchTreeBuilder.cs" />
     <Compile Include="..\..\..\datastructures\BinarySearchTree\IBinarySearchTree.cs" Link="BinarySearchTree\IBinarySearchTree.cs" />
     <Compile Include="..\..\..\datastructures\BinaryTree\BinaryNode.cs" Link="BinaryTree\BinaryNode.cs" />
     <Compile Include="..\..\..\datastructures\BinaryTree\BinaryTree.cs" Link="BinaryTree\BinaryTree.cs" />
@@ -16,7 +15,6 @@
     <Compile Include="..\..\..\datastructures\BinaryTree\IBinaryTree.cs" Link="BinaryTree\IBinaryTree.cs" />
     <Compile Include="..\..\..\datastructures\PriorityQueue\IPriorityQueue.cs" Link="PriorityQueue\IPriorityQueue.cs" />
     <Compile Include="..\..\..\datastructures\PriorityQueue\PriorityQueue.cs" Link="PriorityQueue\PriorityQueue.cs" />
-    <Compile Include="..\..\..\datastructures\PriorityQueue\PriorityQueueBuilder.cs" Link="PriorityQueue\PriorityQueueBuilder.cs" />
   </ItemGroup>
 
   <ItemGroup>
