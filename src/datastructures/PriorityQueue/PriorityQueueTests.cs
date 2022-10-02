@@ -75,7 +75,7 @@ namespace AD
         {
             // Arrange
             IPriorityQueue<int> q = DSBuilder.CreatePriorityQueueModerate();
-            string expected = "2 4 2 7 5 5 6 8 9";
+            string expected = "-8 -2 -8 7 5 5 6 8 9";
 
             // Act
             string actual = q.ToString();
@@ -191,7 +191,7 @@ namespace AD
         {
             // Arrange
             IPriorityQueue<int> q = DSBuilder.CreatePriorityQueueModerate();
-            string expected = "2 4 2 7 5 5 6 8 9 5";
+            string expected = "-8 -2 -8 7 5 5 6 8 9 5";
 
             // Act
             q.Add(5);
@@ -219,7 +219,7 @@ namespace AD
         {
             // Arrange
             IPriorityQueue<int> q = DSBuilder.CreatePriorityQueueModerate();
-            string expected = "2 4 2 7 5 5 6 8 9 6";
+            string expected = "-8 -2 -8 7 5 5 6 8 9 6";
 
             // Act
             q.Add(6);
@@ -247,10 +247,10 @@ namespace AD
         {
             // Arrange
             IPriorityQueue<int> q = DSBuilder.CreatePriorityQueueModerate();
-            string expected = "2 2 2 7 4 5 6 8 9 5";
+            string expected = "-8 -8 -8 7 -2 5 6 8 9 5";
 
             // Act
-            q.Add(2);
+            q.Add(-8);
             string actual = q.ToString();
 
             // Assert
@@ -275,10 +275,10 @@ namespace AD
         {
             // Arrange
             IPriorityQueue<int> q = DSBuilder.CreatePriorityQueueModerate();
-            string expected = "2 3 2 7 4 5 6 8 9 5";
+            string expected = "-8 -5 -8 7 -2 5 6 8 9 5";
 
             // Act
-            q.Add(3);
+            q.Add(-5);
             string actual = q.ToString();
 
             // Assert
@@ -303,10 +303,10 @@ namespace AD
         {
             // Arrange
             IPriorityQueue<int> q = DSBuilder.CreatePriorityQueueModerate();
-            string expected = "1 2 2 7 4 5 6 8 9 5";
+            string expected = "-10 -8 -8 7 -2 5 6 8 9 5";
 
             // Act
-            q.Add(1);
+            q.Add(-10);
             string actual = q.ToString();
 
             // Assert
@@ -383,7 +383,7 @@ namespace AD
         {
             // Arrange
             IPriorityQueue<int> q = DSBuilder.CreatePriorityQueueModerate();
-            string expected = "2 4 5 7 5 9 6 8";
+            string expected = "-8 -2 5 7 5 9 6 8";
 
             // Act
             q.Remove();
@@ -397,7 +397,7 @@ namespace AD
         {
             // Arrange
             IPriorityQueue<int> q = DSBuilder.CreatePriorityQueueModerate();
-            string expected = "4 5 5 7 8 9 6";
+            string expected = "-2 5 5 7 8 9 6";
 
             // Act
             q.Remove();
