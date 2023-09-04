@@ -2,6 +2,7 @@ namespace AD
 {
     public partial class MyStack<T> : IMyStack<T>
     {
+        public MyLinkedList<T> list = new MyLinkedList<T>();
         public bool IsEmpty()
         {
             throw new System.NotImplementedException();
