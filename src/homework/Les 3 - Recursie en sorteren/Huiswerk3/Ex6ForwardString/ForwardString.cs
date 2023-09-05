@@ -4,12 +4,12 @@ namespace AD
 {
     public class Opgave6
     {
-        public static string ForwardString(List<int> list, int from)
+        public static string ForwardString(List<int> list, int from_index)
         {
             throw new System.NotImplementedException();
         }
         
-        public static string BackwardString(List<int> list, int to)
+        public static string BackwardString(List<int> list, int from_index)
         {
             throw new System.NotImplementedException();
         }
