@@ -11,10 +11,12 @@
 
   <ItemGroup>
     <Compile Include="..\..\..\algorithms\sorters\SorterBuilder.cs" Link="SorterBuilder.cs" />
+    <Compile Include="..\..\..\algorithms\sorters\SorterTests.cs" Link="SorterTests.cs" />
     <Compile Include="..\..\..\datastructures\BinaryTree\BinaryTreeBuilder.cs" Link="BinaryTreeBuilder.cs" />
     <Compile Include="..\..\..\datastructures\BinaryTree\BinaryTreeTests.cs" Link="BinaryTreeTests.cs" />
     <Compile Include="..\..\..\datastructures\FirstChildNextSibling\FirstChildNextSiblingBuilder.cs" Link="FirstChildNextSiblingBuilder.cs" />
     <Compile Include="..\..\..\datastructures\FirstChildNextSibling\FirstChildNextSiblingTests.cs" Link="FirstChildNextSiblingTests.cs" />
+    <Compile Include="..\..\..\utils\TestUtils.cs" Link="TestUtils.cs" />
   </ItemGroup>
   
   <ItemGroup>

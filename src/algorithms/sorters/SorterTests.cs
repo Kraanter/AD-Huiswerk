@@ -2,12 +2,13 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace AD
 {
+
     [TestFixture]
-    public partial class SortingTests
+    public partial class SorterTests
     {
+
         [Test, Combinatorial]
         public void Sort(
                     [Values("InsertionSort", "MergeSort", "ShellSort", "QuickSort")] string sorterName,
@@ -16,15 +17,13 @@ namespace AD
             List<int> list = new List<int>();
             List<int> listCopy;
             Sorter sorter;
-            System.Random random = new System.Random();
 
             // Arrange
             sorter = DSBuilder.CreateSorter(sorterName);
             Assert.IsNotNull(sorter);
 
             // Arrange
-            for (int i = 0; i < n; i++)
-                list.Add(random.Next(0, 100000));
+            list = TestUtils.RandomList(0, 100000, n);
             listCopy = new List<int>(list);
             listCopy.Sort();
 
@@ -35,10 +34,9 @@ namespace AD
             bool equal = list.SequenceEqual(listCopy);
             Assert.IsTrue(equal);
         }
-        
         [Test, Combinatorial]
         public void SortSame(
-                    [Values("InsertionSort", "MergeSort", "ShellSort", "QuickSort")] string sorterName)
+                            [Values("InsertionSort", "MergeSort", "ShellSort", "QuickSort")] string sorterName)
         {
             List<int> list = new List<int>();
             Sorter sorter;

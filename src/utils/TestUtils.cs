@@ -26,5 +26,24 @@ namespace AD
                 return "NIL";
             return "[" + string.Join(",", lst.OrderBy(x => x)) + "]";
         }
-    }
+        public static List<int> RandomList(int lo, int hi, int count, bool unique = false)
+        {
+            HashSet<int> hash = new HashSet<int>();
+            List<int> list = new List<int>();
+            System.Random random = new System.Random();
+
+            while (list.Count < count)
+            {
+                int elt = random.Next(lo, hi);
+                if (unique && hash.Contains(elt))
+                    continue;
+                list.Add(elt);
+                hash.Add(elt);
+            }
+            return list;
+        }
+        public List<int> UniqueRandomList(int lo, int hi, int count)
+        {
+            return RandomList(lo, hi, count, true);
+        }    }
 }

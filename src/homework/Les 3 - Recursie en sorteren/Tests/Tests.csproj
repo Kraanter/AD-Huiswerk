@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <Compile Include="..\..\..\algorithms\sorters\SorterBuilder.cs" Link="SorterBuilder.cs" />
+    <Compile Include="..\..\..\algorithms\sorters\SorterTests.cs" Link="SorterTests.cs" />
     <Compile Include="..\..\..\utils\TestUtils.cs" Link="TestUtils.cs" />
   </ItemGroup>
 
