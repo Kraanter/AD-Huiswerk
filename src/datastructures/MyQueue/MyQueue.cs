@@ -1,33 +1,46 @@
-using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace AD
 {
     public partial class MyQueue<T> : IMyQueue<T>
     {
+        private MyLinkedList<T> list;
+        
+        public MyQueue()
+        {
+            list = new ();
+        }
+        
         public bool IsEmpty()
         {
-            throw new System.NotImplementedException();
+            return list.Size() == 0;
         }
 
         public void Enqueue(T data)
         {
-            throw new System.NotImplementedException();
+            list.AddLast(data);
         }
 
         public T GetFront()
         {
-            throw new System.NotImplementedException();
+            if (IsEmpty())
+                throw new MyQueueEmptyException();
+            return list.GetFirst();
         }
 
         public T Dequeue()
         {
-            throw new System.NotImplementedException();
+            if (IsEmpty())
+                throw new MyQueueEmptyException();
+            T data = list.GetFirst();
+            list.RemoveFirst();
+            return data;
         }
 
         public void Clear()
         {
-            throw new System.NotImplementedException();
+            list.Clear();
         }
-
+        
     }
 }

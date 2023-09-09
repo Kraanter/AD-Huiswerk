@@ -5,6 +5,7 @@ namespace AD
     public partial class MyLinkedList<T> : IMyLinkedList<T>
     {
         public MyLinkedListNode<T> first;
+        public MyLinkedListNode<T> last;
         private int size;
 
         public MyLinkedList()
@@ -20,20 +21,44 @@ namespace AD
                 next = first
             };
             first = nodeToAdd;
+            if (size == 0)
+                last = nodeToAdd;
+            size++;
+        }
+
+        public void AddLast(T data)
+        {
+            MyLinkedListNode<T> nodeToAdd = new()
+            {
+                data = data,
+            };
+            if (size != 0)
+                last.next = nodeToAdd;
+            else
+                first = nodeToAdd;
+            last = nodeToAdd;
             size++;
         }
 
         public T GetFirst()
         {
-            if (first == null)
+            if (size == 0)
                 throw new MyLinkedListEmptyException();
             
             return first.data;
         }
 
+        public T GetLast()
+        {
+            if (size == 0)
+                throw new MyLinkedListEmptyException();
+
+            return last.data;
+        }
+
         public void RemoveFirst()
         {
-            if (first == null)
+            if (size == 0)
                 throw new MyLinkedListEmptyException();
             if (first.next != null)
             {
