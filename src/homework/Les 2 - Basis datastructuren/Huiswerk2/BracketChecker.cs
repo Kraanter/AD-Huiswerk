@@ -18,7 +18,19 @@ namespace AD
         /// Returns False otherwise.</returns>
         public static bool CheckBrackets(string s)
         {
-            throw new System.NotImplementedException();
+	        MyStack<char> bracketStack = new();
+	        foreach (var c in s)
+	        {
+		        if (c.Equals('('))
+			        bracketStack.Push(c);
+		        else if (c.Equals(')'))
+			        if (bracketStack.IsEmpty())
+				        return false;
+					else 
+						bracketStack.Pop();
+	        }
+
+	        return bracketStack.IsEmpty();
         }
 
 
@@ -37,7 +49,28 @@ namespace AD
         /// Returns False otherwise.</returns>
         public static bool CheckBrackets2(string s)
         {
-            throw new System.NotImplementedException();
+	        MyStack<char> bracketStack = new();
+	        foreach (var c in s)
+	        {
+		        if (c == '[' || c == '{' || c == '(')
+		        {
+			       bracketStack.Push(c); 
+		        }
+		        else if (c == ']' || c == '}' || c == ')')
+		        {
+			        char top = bracketStack.Top();
+			        if (
+				        top == '[' && c == ']' ||
+				        top == '{' && c == '}' ||
+				        top == '(' && c == ')'
+			        )
+				        bracketStack.Pop();
+			        else
+				        return false;
+		        }
+	        }
+
+	        return bracketStack.IsEmpty();
         }
 
     }
