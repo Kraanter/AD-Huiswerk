@@ -7,50 +7,78 @@
 
         public MyArrayList(int capacity)
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            if (capacity < 0)
+                throw new MyArrayListIndexOutOfRangeException();
+            
+            data = new int[capacity];
+            size = 0;
         }
 
         public void Add(int n)
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            if (data.Length == size)
+                throw new MyArrayListFullException();
+
+            data[size] = n;
+            size++;
         }
 
         public int Get(int index)
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            if (index < 0 || size - 1 < index)
+                throw new MyArrayListIndexOutOfRangeException();
+
+            return data[index];
         }
 
         public void Set(int index, int n)
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            if (index < 0 || size - 1 < index)
+                throw new MyArrayListIndexOutOfRangeException();
+
+            data[index] = n;
         }
 
         public int Capacity()
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            return data.Length;
         }
 
         public int Size()
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            return size;
         }
 
         public void Clear()
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            data = new int[data.Length];
+            size = 0;
         }
 
         public int CountOccurences(int n)
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            int count = 0;
+            for (int i = 0; i < size; i++)
+            {
+                if (data[i] == n)
+                    count++;
+            }
+            return count;
+        }
+
+        public override string ToString()
+        {
+            if (size == 0)
+                return "NIL";
+            
+            string dataString = "";
+            for (int i = 0; i < size - 1; i++)
+            {
+                dataString += data[i] + ",";
+            }
+
+            dataString += data[size - 1];
+            return $"[{dataString}]";
         }
     }
 }
