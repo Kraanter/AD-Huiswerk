@@ -4,9 +4,15 @@
     {
         // Add an item to the start of the list
         void AddFirst(T data);
+        
+        // Add an item to the end of the list
+        void AddLast(T data);
 
         // Returns the first item of the list
         T GetFirst();
+
+        // Returns the last item of the list
+        T GetLast();
 
         // Remove the first item of the list
         void RemoveFirst();

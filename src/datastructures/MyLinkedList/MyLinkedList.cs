@@ -97,6 +97,11 @@ namespace AD
                 AddFirst(data);
                 return;
             }
+            if (index == size)
+            {
+                AddLast(data);
+                return;
+            }
 
             var node = first;
             for (int i = 0; i < index - 1; i++)

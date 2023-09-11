@@ -583,6 +583,147 @@ namespace AD
             Assert.IsNull(lst.first.next.next.next.next);
         }
 
+        /// ------------------------------------------------
+        /// Make sure implementation of Last node is working
+        /// ------------------------------------------------
+        
+        [Test]
+        public void MyLinkedList_8_Last_1_AddLast()
+        {
+            // Arrange
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
+            string expected = "1";
 
+            // Act
+            lst.AddLast("1");
+            string actual = lst.GetLast();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+        
+        
+        [Test]
+        public void MyLinkedList_8_Last_2_AddFirstIsLast()
+        {
+            // Arrange
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
+            string expected = "1";
+
+            // Act
+            lst.AddFirst("1");
+            string actual = lst.GetLast();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        
+        [Test]
+        public void MyLinkedList_8_Last_3_AddLastIsFirst()
+        {
+            // Arrange
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
+            string expected = "1";
+
+            // Act
+            lst.AddLast("1");
+            string actual = lst.GetFirst();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+        
+        
+        [Test]
+        public void MyLinkedList_8_Last_4_FirstAddStaysLast()
+        {
+            // Arrange
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
+            string expected = "1";
+
+            // Act
+            lst.AddFirst("1");
+            lst.AddFirst("2");
+            string actual = lst.GetLast();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+        
+        [Test]
+        public void MyLinkedList_8_Last_5_LastAddIsLast()
+        {
+            // Arrange
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
+            string expected = "3";
+
+            // Act
+            lst.AddFirst("1");
+            lst.AddFirst("2");
+            lst.AddLast("3");
+            string actual = lst.GetLast();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+        
+        [Test]
+        public void MyLinkedList_8_Last_6_InsertLastIndexIsLast()
+        {
+            // Arrange
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
+            string expected = "3";
+
+            // Act
+            lst.AddFirst("1");
+            lst.AddFirst("2");
+            lst.Insert(2, "3");
+            string actual = lst.GetLast();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+        
+        [Test]
+        public void MyLinkedList_8_Last_7_InsertLastStays()
+        {
+            // Arrange
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
+            string expected = "1";
+
+            // Act
+            lst.AddFirst("1");
+            lst.AddFirst("2");
+            lst.Insert(1, "3");
+            string actual = lst.GetLast();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+        
+        [Test]
+        public void MyLinkedList_8_Last_8_ThrowsExceptionOnGetEmptyList()
+        {
+            // Arrange
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
+
+            // Act & Assert
+            Assert.Throws(typeof(MyLinkedListEmptyException), () => lst.GetLast());
+        }
+        
+        [Test]
+        public void MyLinkedList_8_Last_9_ThrowsExceptionOnGetEmptyListAfterInsert()
+        {
+            // Arrange
+            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
+            
+            // Act
+            lst.AddLast("1");
+            lst.RemoveFirst();
+
+            // Act & Assert
+            Assert.Throws(typeof(MyLinkedListEmptyException), () => lst.GetLast());
+        }
     }
 }
