@@ -26,8 +26,10 @@ namespace AD
 		        else if (c.Equals(')'))
 			        if (bracketStack.IsEmpty())
 				        return false;
-					else 
-						bracketStack.Pop();
+			        else
+				        bracketStack.Pop();
+		        else
+			        throw new BracketCheckerInvalidInputException();
 	        }
 
 	        return bracketStack.IsEmpty();
@@ -67,6 +69,10 @@ namespace AD
 				        bracketStack.Pop();
 			        else
 				        return false;
+		        }
+		        else
+		        {
+			        throw new BracketCheckerInvalidInputException();
 		        }
 	        }
 
