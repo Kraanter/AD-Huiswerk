@@ -1,15 +1,26 @@
-﻿namespace AD
+﻿using System.Collections.Generic;
+
+namespace AD
 {
     public class Opgave1
     {
         public static long FacRecursive(int n)
         {
-            throw new System.NotImplementedException();
+            if (n <= 2)
+                return n;
+
+            return n * FacRecursive(n - 1);
         }
 
         public static long FacIterative(int n)
         {
-            throw new System.NotImplementedException();
+            long result = 1;
+            
+            for(long i = 2; i<=n; ++i) {
+                result *= i;
+            }
+
+            return result;
         }
 
         public static void Run()
