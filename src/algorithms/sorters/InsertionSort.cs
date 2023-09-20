@@ -12,18 +12,19 @@ namespace AD
 
         public void Sort(List<int> list, int lo, int hi)
         {
-            for (int n = 0; n < hi + 1; n++)
+            if (lo > hi)
+                return;
+            
+            int i = lo;
+            int sortNum = list[i];
+            while (i > 0 && sortNum < list[i - 1])
             {
-                int i = n;
-                int sortNum = list[n];
-                while (i > 0 && sortNum < list[i - 1])
-                {
-                    list[i] = list[i - 1];
-                    i--;
-                }
-
-                list[i] = sortNum;
+                list[i] = list[i - 1];
+                i--;
             }
+
+            list[i] = sortNum;
+            Sort(list, lo + 1, hi);
         }
     }
 }
