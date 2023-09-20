@@ -4,13 +4,10 @@
     {
         public static int Enen(int n)
         {
-            if (n < 2)
+            if (n <= 0)
                 return n;
-            
-            if (n % 2 == 0)
-                return Enen(n / 2);
 
-            return 1 + Enen(n / 2);
+            return n % 2 + Enen(n / 2);
         }
 
         public static void Run()
