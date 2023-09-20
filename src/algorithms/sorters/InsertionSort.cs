@@ -12,7 +12,18 @@ namespace AD
 
         public void Sort(List<int> list, int lo, int hi)
         {
-            throw new System.NotImplementedException();
+            for (int n = 0; n < hi + 1; n++)
+            {
+                int i = n;
+                int sortNum = list[n];
+                while (i > 0 && sortNum < list[i - 1])
+                {
+                    list[i] = list[i - 1];
+                    i--;
+                }
+
+                list[i] = sortNum;
+            }
         }
     }
 }
