@@ -5,7 +5,7 @@
         public static int Enen(int n)
         {
             if (n <= 0)
-                return n;
+                return 0;
 
             return n % 2 + Enen(n / 2);
         }
