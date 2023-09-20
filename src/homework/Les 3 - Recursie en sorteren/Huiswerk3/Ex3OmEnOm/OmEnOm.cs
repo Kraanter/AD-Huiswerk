@@ -6,7 +6,13 @@ namespace AD
     {
         public static int OmEnOm(int n)
         {
-            throw new System.NotImplementedException();
+            if (n < 0)
+                throw new OmEnOmNegativeValueException();
+            
+            if (n <= 2)
+                return n;
+            
+            return n + OmEnOm(n - 2);
         }
         public static void Run()
         {
