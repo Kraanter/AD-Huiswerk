@@ -6,12 +6,24 @@ namespace AD
     {
         public static string ForwardString(List<int> list, int from_index)
         {
-            throw new System.NotImplementedException();
+            if (list.Count < from_index + 1)
+                return "";
+            
+            int lastNum = list[list.Count - 1];
+            list.RemoveAt(list.Count - 1);
+            
+            return ForwardString(list, from_index) + " " + lastNum;
         }
         
         public static string BackwardString(List<int> list, int from_index)
         {
-            throw new System.NotImplementedException();
+            if (list.Count < from_index + 1)
+                return "";
+            
+            int lastNum = list[list.Count - 1];
+            list.RemoveAt(list.Count - 1);
+            
+            return lastNum + " " + BackwardString(list, from_index);
         }
 
         public static void Run()
