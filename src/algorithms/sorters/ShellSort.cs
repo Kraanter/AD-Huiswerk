@@ -21,7 +21,6 @@ namespace AD
 
             foreach (var increment in increments)    
             {
-                Debug.WriteLine($"Increment: {increment}");
                 Sort(list, 0, increment);
             }
 
