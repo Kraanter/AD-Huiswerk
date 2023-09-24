@@ -22,7 +22,7 @@ namespace AD
 
         public void PrintPreOrder()
         {
-            Console.WriteLine("KAASSTENGELS");
+            root?.PrintPreOrder(0);
         }
 
         public override string ToString()

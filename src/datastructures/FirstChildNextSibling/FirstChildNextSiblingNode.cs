@@ -1,3 +1,4 @@
+using System;
 using System.Text;
 
 namespace AD
@@ -46,6 +47,18 @@ namespace AD
                 height += 1 + nextSibling.Size();
 
             return height;
+        }
+
+        public void PrintPreOrder(int indent)
+        {
+            string padding = "";
+            
+            for (int i = 0; i < indent; i++)
+                padding += "  ";
+            
+            Console.WriteLine(padding + data);
+            firstChild?.PrintPreOrder(indent + 1);
+            nextSibling?.PrintPreOrder(indent);
         }
 
         public override string ToString()
