@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace AD
 {
     public partial class FirstChildNextSiblingNode<T> : IFirstChildNextSiblingNode<T>
@@ -8,27 +10,57 @@ namespace AD
 
         public FirstChildNextSiblingNode(T data, FirstChildNextSiblingNode<T> firstChild, FirstChildNextSiblingNode<T> nextSibling)
         {
-            throw new System.NotImplementedException();
+            this.data = data;
+            this.firstChild = firstChild;
+            this.nextSibling = nextSibling;
         }
 
         public FirstChildNextSiblingNode(T data)
         {
-            throw new System.NotImplementedException();
+            this.data = data;
         }
 
         public T GetData()
         {
-            throw new System.NotImplementedException();
+            return data;
         }
 
         public FirstChildNextSiblingNode<T> GetFirstChild()
         {
-            throw new System.NotImplementedException();
+            return firstChild;
         }
 
         public FirstChildNextSiblingNode<T> GetNextSibling()
         {
-            throw new System.NotImplementedException();
+            return nextSibling;
+        }
+
+        public int Size()
+        {
+            int height = 0;
+            
+            if (firstChild is not null)
+                height += 1 + firstChild.Size();
+            
+            if (nextSibling is not null)
+                height += 1 + nextSibling.Size();
+
+            return height;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new();
+            
+            sb.Append(data);
+            
+            if (firstChild is not null)
+                sb.Append($",FC({firstChild})");
+
+            if (nextSibling is not null)
+                sb.Append($",NS({nextSibling})");
+
+            return sb.ToString();
         }
     }
 }

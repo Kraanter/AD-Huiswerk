@@ -1,3 +1,6 @@
+using System;
+using System.Net.Sockets;
+
 namespace AD
 {
     public partial class FirstChildNextSibling<T> : IFirstChildNextSibling<T>
@@ -11,12 +14,23 @@ namespace AD
 
         public int Size()
         {
-               throw new System.NotImplementedException();
+            if (root is null)
+                return 0;
+            
+            return 1 + root.Size();
         }
 
         public void PrintPreOrder()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("KAASSTENGELS");
+        }
+
+        public override string ToString()
+        {
+            if (root is null)
+                return "NIL";
+
+            return root.ToString();
         }
 
     }
