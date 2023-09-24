@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 
 namespace AD
@@ -26,18 +27,25 @@ namespace AD
             int pivotNumber = list[pivotIndex];
             // Swap the pivot with the end of the list
             Swap(list, new (pivotIndex, hi));
+            pivotIndex = hi;
 
-            int i = lo;
-            int j = hi - 1;
+            int i = lo - 1;
+            int j = hi;
 
             do
             {
                 while (list[++i] < pivotNumber) ;
                 while (list[--j] > pivotNumber) ;
                 
-                Swap(list, new(i, j));
+                if (i <= j)
+                    Swap(list, new(i, j));
                 
             } while (i <= j);
+            Debug.WriteLine($"end {i}/{j} from ({lo}, {hi}) with pivot {pivotIndex}");
+            
+            Swap(list, new(pivotIndex, i));
+
+            pivotIndex = i;
             
             // Sort everything less than pivot
             Sort(list, lo, pivotIndex - 1);
