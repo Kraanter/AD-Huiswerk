@@ -41,7 +41,6 @@ namespace AD
                     Swap(list, new(i, j));
                 
             } while (i <= j);
-            Debug.WriteLine($"end {i}/{j} from ({lo}, {hi}) with pivot {pivotIndex}");
             
             Swap(list, new(pivotIndex, i));
 

@@ -14,7 +14,6 @@ namespace AD
 
         private void Sort(List<int> list, Tuple<int, int> range)
         {
-            Debug.WriteLine($"Van {range.Item1} tot {range.Item2}");
             if (range.Item1 >= range.Item2)
                 return;
 
