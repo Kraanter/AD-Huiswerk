@@ -10,12 +10,12 @@ namespace AD
 
         public BinaryTree()
         {
-            throw new System.NotImplementedException();
+            root = null;
         }
 
         public BinaryTree(T rootItem)
         {
-            throw new System.NotImplementedException();
+            root = new BinaryNode<T>(rootItem, null, null);
         }
 
 
@@ -25,47 +25,50 @@ namespace AD
 
         public BinaryNode<T> GetRoot()
         {
-            throw new System.NotImplementedException();
+            return root;
         }
 
         public int Size()
         {
-            throw new System.NotImplementedException();
+            if (root is null)
+                return 0;
+            
+            return 1 + root.Size();
         }
 
         public int Height()
         {
-            throw new System.NotImplementedException();
+            return root?.Height() ?? -1;
         }
 
         public void MakeEmpty()
         {
-            throw new System.NotImplementedException();
+            root = null;
         }
 
         public bool IsEmpty()
         {
-            throw new System.NotImplementedException();
+            return root is null;
         }
 
         public void Merge(T rootItem, BinaryTree<T> t1, BinaryTree<T> t2)
         {
-            throw new System.NotImplementedException();
+            root = new BinaryNode<T>(rootItem, t1?.GetRoot(), t2?.GetRoot());
         }
 
         public string ToPrefixString()
         {
-            throw new System.NotImplementedException();
+            return root?.ToPrefixString() ?? "NIL";
         }
 
         public string ToInfixString()
         {
-            throw new System.NotImplementedException();
+            return root?.ToInfixString() ?? "NIL";
         }
 
         public string ToPostfixString()
         {
-            throw new System.NotImplementedException();
+            return root?.ToPostfixString() ?? "NIL";
         }
 
 
@@ -75,17 +78,17 @@ namespace AD
 
         public int NumberOfLeaves()
         {
-            throw new System.NotImplementedException();
+            return root?.NumberOfLeaves() ?? 0;
         }
 
         public int NumberOfNodesWithOneChild()
         {
-            throw new System.NotImplementedException();
+            return root?.NumberOfNodesWithOneChild() ?? 0;
         }
 
         public int NumberOfNodesWithTwoChildren()
         {
-            throw new System.NotImplementedException();
+            return root?.NumberOfNodesWithTwoChildren() ?? 0;
         }
     }
 }
