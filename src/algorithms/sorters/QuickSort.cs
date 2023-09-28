@@ -26,7 +26,7 @@ namespace AD
             int pivotIndex = GetPivotIndex(list, lo, hi);
             int pivotNumber = list[pivotIndex];
             // Swap the pivot with the end of the list
-            Swap(list, new (pivotIndex, hi));
+            Swap(list, pivotIndex, hi);
             pivotIndex = hi;
 
             int i = lo - 1;
@@ -38,11 +38,11 @@ namespace AD
                 while (list[--j] > pivotNumber) ;
                 
                 if (i <= j)
-                    Swap(list, new(i, j));
+                    Swap(list, i, j);
                 
             } while (i <= j);
             
-            Swap(list, new(pivotIndex, i));
+            Swap(list, pivotIndex, i);
 
             pivotIndex = i;
             
@@ -67,13 +67,13 @@ namespace AD
             return hi;
         }
 
-        private void Swap(List<int> list, Tuple<int, int> positions)
+        private void Swap(List<int> list, int item1, int item2)
         {
-            int val1 = list[positions.Item1];
-            int val2 = list[positions.Item2];
+            int val1 = list[item1];
+            int val2 = list[item2];
 
-            list[positions.Item1] = val2;
-            list[positions.Item2] = val1;
+            list[item1] = val2;
+            list[item2] = val1;
         }
     }
 }
