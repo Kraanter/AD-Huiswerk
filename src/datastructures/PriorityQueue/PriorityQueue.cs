@@ -111,7 +111,7 @@ namespace AD
 
         public void BuildHeap()
         {
-            for (int i = size; i >= 1; i--)
+            for (int i = size/2; i >= 1; i--)
             {
                 PercolateDown(i);
             }
