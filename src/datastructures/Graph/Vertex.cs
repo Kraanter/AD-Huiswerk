@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace AD
 {
-    public partial class Vertex : IVertex
+    public partial class Vertex : IVertex, IComparable<IVertex>
     {
         public string name;
         public LinkedList<Edge> adj;
@@ -69,6 +69,11 @@ namespace AD
         //----------------------------------------------------------------------
         // ToString that has to be implemented for exam
         //----------------------------------------------------------------------
+
+        public int CompareTo(IVertex? other)
+        {
+            return this.GetDistance().CompareTo(other.GetDistance());
+        }
 
         /// <summary>
         ///    Converts this instance of Vertex to its string representation.

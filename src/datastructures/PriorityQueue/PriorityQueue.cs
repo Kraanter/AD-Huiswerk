@@ -48,7 +48,7 @@ namespace AD
 
         private void PercolateUp(int index)
         {
-            if (index < 1)
+            if (index < 2)
                 return;
             
             if (array[index / 2].CompareTo(array[index]) > 0)

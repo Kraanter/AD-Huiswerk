@@ -115,7 +115,35 @@ namespace AD
         /// <param name="name">The name of the starting vertex</param>
         public void Dijkstra(string name)
         {
-            throw new System.NotImplementedException();
+            var kjuw = new PriorityQueue<Vertex>();
+            var start = GetVertex(name);
+            start.distance = 0;
+            kjuw.Add(start);
+            
+            while (kjuw.size > 0)
+            {
+                var vert = kjuw.Remove();
+                var cur = vert.GetDistance();
+                
+                if(vert.known)
+                    continue;
+                
+                vert.known = true;
+
+                var node = vert.GetAdjacents().First;
+                while (node?.Value is not null)
+                {
+                    var dest = node.Value.dest;
+                    var newDist = cur + node.Value.cost;
+                    if (dest.distance > newDist)
+                    {
+                        dest.distance = newDist;
+                        kjuw.Add(dest);
+                    }
+                    
+                    node = node.Next;
+                }
+            }
         }
 
         //----------------------------------------------------------------------
