@@ -83,7 +83,30 @@ namespace AD
         /// <param name="name">The name of the starting vertex</param>
         public void Unweighted(string name)
         {
-            throw new System.NotImplementedException();
+            var kjuw = new Queue<Vertex>();
+            var start = GetVertex(name);
+            start.distance = 0;
+            kjuw.Enqueue(start);
+
+            while (kjuw.Count > 0)
+            {
+                var vert = kjuw.Dequeue();
+                var cur = vert.GetDistance();
+
+                var node = vert.GetAdjacents().First;
+                while (node?.Value is not null)
+                {
+                    var dest = node.Value.dest;
+                    var newDist = cur + 1;
+                    if (dest.distance > newDist)
+                    {
+                        dest.distance = newDist;
+                        kjuw.Enqueue(dest);
+                    }
+                    
+                    node = node.Next;
+                }
+            }
         }
 
         /// <summary>
