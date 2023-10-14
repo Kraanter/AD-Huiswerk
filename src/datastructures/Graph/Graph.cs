@@ -17,7 +17,7 @@ namespace AD
 
         public Graph()
         {
-            throw new System.NotImplementedException();
+            vertexMap = new Dictionary<string, Vertex>();
         }
 
 
@@ -32,7 +32,7 @@ namespace AD
         /// <param name="name">The name of the new vertex</param>
         public void AddVertex(string name)
         {
-            throw new System.NotImplementedException();
+            vertexMap.TryAdd(name, new Vertex(name));
         }
 
 
@@ -44,7 +44,9 @@ namespace AD
         /// <returns>The vertex withe the given name</returns>
         public Vertex GetVertex(string name)
         {
-            throw new System.NotImplementedException();
+            AddVertex(name);
+
+            return vertexMap[name];
         }
 
 
@@ -58,7 +60,8 @@ namespace AD
         /// <param name="cost">cost of the edge</param>
         public void AddEdge(string source, string dest, double cost = 1)
         {
-            throw new System.NotImplementedException();
+            var destVert = GetVertex(dest);
+            GetVertex(source).adj.AddLast(new Edge(destVert, cost));
         }
 
 
@@ -68,7 +71,10 @@ namespace AD
         /// </summary>
         public void ClearAll()
         {
-            throw new System.NotImplementedException();
+            foreach (var key in vertexMap.Keys)
+            {
+                GetVertex(key).Reset();
+            }
         }
 
         /// <summary>
@@ -101,16 +107,18 @@ namespace AD
         /// <returns>The string representation of this Graph instance</returns>
         public override string ToString()
         {
-            throw new System.NotImplementedException();
+            var retString = "";
+
+            foreach (string key in vertexMap.Keys.OrderBy(x => x))
+                retString += GetVertex(key) + "\n";
+
+            return retString;
         }
 
 
         //----------------------------------------------------------------------
         // Interface methods : methods that have to be implemented for homework
         //----------------------------------------------------------------------
-
-
-
         public bool IsConnected()
         {
             throw new System.NotImplementedException();
