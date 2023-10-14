@@ -10,5 +10,14 @@ namespace AD
             dest = d;
             cost = c;
         }
+
+        public override string ToString()
+        {
+            var retString = dest.name;
+
+            retString += $"({cost})";
+
+            return retString;
+        }
     }
 }

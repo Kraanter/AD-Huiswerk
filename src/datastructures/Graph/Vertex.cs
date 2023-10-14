@@ -24,7 +24,8 @@ namespace AD
         /// <param name="name">The name of the new vertex</param>
         public Vertex(string name)
         {
-            throw new System.NotImplementedException();
+            Reset();
+            this.name = name;
         }
 
 
@@ -34,31 +35,34 @@ namespace AD
 
         public string GetName()
         {
-            throw new System.NotImplementedException();
+            return name;
         }
         public LinkedList<Edge> GetAdjacents()
         {
-            throw new System.NotImplementedException();
+            return adj;
         }
 
         public double GetDistance()
         {
-            throw new System.NotImplementedException();
+            return distance;
         }
 
         public Vertex GetPrevious()
         {
-            throw new System.NotImplementedException();
+            return prev;
         }
 
         public bool GetKnown()
         {
-            throw new System.NotImplementedException();
+            return known;
         }
 
         public void Reset()
         {
-            throw new System.NotImplementedException();
+            adj = new LinkedList<Edge>();
+            distance = Graph.INFINITY;
+            prev = null;
+            known = false;
         }
 
 
@@ -75,7 +79,19 @@ namespace AD
         /// <returns>The string representation of this Graph instance</returns> 
         public override string ToString()
         {
-            throw new System.NotImplementedException();
+            string retString = name;
+
+            if (GetDistance() < Graph.INFINITY)
+                retString += $"({GetDistance()})";
+
+            retString += "[";
+            
+            foreach (Edge e in adj.OrderBy(x => x.dest.name))
+                retString += e;
+
+            retString += "]";
+
+            return retString;
         }
     }
 }
