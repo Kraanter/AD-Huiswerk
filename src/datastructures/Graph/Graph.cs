@@ -32,7 +32,12 @@ namespace AD
         /// <param name="name">The name of the new vertex</param>
         public void AddVertex(string name)
         {
-            vertexMap.TryAdd(name, new Vertex(name));
+            AddVertex(name, new Vertex(name));
+        }
+
+        public void AddVertex(string name, Vertex vertex)
+        {
+            vertexMap.TryAdd(name, vertex);
         }
 
 
@@ -60,8 +65,10 @@ namespace AD
         /// <param name="cost">cost of the edge</param>
         public void AddEdge(string source, string dest, double cost = 1)
         {
+            var sourceVert = GetVertex(source);
             var destVert = GetVertex(dest);
-            GetVertex(source).adj.AddLast(new Edge(destVert, cost));
+            
+            sourceVert.adj.AddLast(new Edge(destVert, cost));
         }
 
 
@@ -115,6 +122,7 @@ namespace AD
         /// <param name="name">The name of the starting vertex</param>
         public void Dijkstra(string name)
         {
+            ClearAll();
             var kjuw = new PriorityQueue<Vertex>();
             var start = GetVertex(name);
             start.distance = 0;
@@ -129,7 +137,7 @@ namespace AD
                     continue;
                 
                 vert.known = true;
-
+                
                 var node = vert.GetAdjacents().First;
                 while (node?.Value is not null)
                 {
@@ -138,6 +146,7 @@ namespace AD
                     if (dest.distance > newDist)
                     {
                         dest.distance = newDist;
+                        dest.prev = vert;
                         kjuw.Add(dest);
                     }
                     

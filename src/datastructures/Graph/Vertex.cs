@@ -25,6 +25,7 @@ namespace AD
         public Vertex(string name)
         {
             Reset();
+            this.adj = new LinkedList<Edge>();
             this.name = name;
         }
 
@@ -59,7 +60,6 @@ namespace AD
 
         public void Reset()
         {
-            adj = new LinkedList<Edge>();
             distance = Graph.INFINITY;
             prev = null;
             known = false;

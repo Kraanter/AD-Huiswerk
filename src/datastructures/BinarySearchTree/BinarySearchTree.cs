@@ -10,9 +10,8 @@ namespace AD
 
         public void Insert(T x)
         {
-            if (root is null)
-                root = new BinaryNode<T>(x, null, null);
-            
+            root ??= new BinaryNode<T>(x, null, null);
+
             InsertInto(x, root);
         }
 
@@ -58,10 +57,7 @@ namespace AD
                 root = null;
             else
             {
-                if (node.right is not null)
-                    parent.left = node.right;
-                else
-                    parent.left = null;
+                parent.left = node.right;
             }
         }
 
@@ -94,12 +90,8 @@ namespace AD
             // Zero or one node are null
             if (node.left is null || node.right is null)
             {
-                if (parent is null){
-                    if (removeLeft)
-                        root = node.right;
-                    else
-                        root = node.left;
-                }
+                if (parent is null)
+                    root = removeLeft ? node.right : node.left;
 
                 if (removeLeft)
                     parent.left = node.left ?? node.right;
