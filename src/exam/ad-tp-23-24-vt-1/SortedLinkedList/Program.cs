@@ -40,7 +40,7 @@ namespace AD
             System.Console.WriteLine("ToString()       : {0}", list.ToString());
             System.Console.WriteLine("ToStringSorted() : {0}", list.ToStringSorted());
 
-            System.Console.WriteLine();
+            // System.Console.WriteLine();
             System.Console.WriteLine("=== Find ===");
             for (int value = -1; value < 10; value += 2)
             {
