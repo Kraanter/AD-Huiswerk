@@ -33,7 +33,33 @@ namespace AD
 
         public static bool WoordBestaatUniek(string woord, char[,] grid, int row, int col)
         {
-            // throw new System.NotImplementedException();
+            if (woord is null || woord.Length == 0)
+                return true;
+
+            if (row > grid.GetLength(0)-1 || col > grid.GetLength(1)-1 || col < 0 || row < 0)
+                return false;
+
+            var letter = woord.Substring(0, 1);
+            var woordZonderBegin = woord.Substring(1);
+
+            if (letter == grid[row, col].ToString())
+            {
+                char[,] gridState = new char[grid.GetLength(0), grid.GetLength(1)];
+                
+                for (int x = 0; x < grid.GetLength(0); x++)
+                    for (int y = 0; y < grid.GetLength(1); y++)
+                        gridState[x, y] = grid[x, y];
+
+                gridState[row, col] = ' ';
+                
+                bool left = WoordBestaat(woordZonderBegin, gridState, row, col - 1);
+                bool right = WoordBestaat(woordZonderBegin, gridState, row, col + 1);
+                bool above = WoordBestaat(woordZonderBegin, gridState, row - 1, col);
+                bool below =  WoordBestaat(woordZonderBegin, gridState, row + 1, col);
+
+                return left || right || below || above;
+            }
+            
             return false;
         }
 
