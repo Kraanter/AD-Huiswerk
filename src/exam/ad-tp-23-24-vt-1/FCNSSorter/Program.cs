@@ -14,7 +14,6 @@ namespace AD
             FirstChildNextSiblingSorter sorter = new FirstChildNextSiblingSorter();
             Console.WriteLine("=== Init : PrintPreOrder ===");
             sorter.tree.PrintPreOrder();
-            Console.WriteLine();
 
             foreach (int num in nums)
             {
@@ -22,7 +21,6 @@ namespace AD
             }
             Console.WriteLine("=== VoegToe : PrintPreOrder ===");
             sorter.tree.PrintPreOrder();
-            Console.WriteLine();
 
             Console.WriteLine("=== Sorteer ===");
             List<int> nums_list = new List<int>(nums);

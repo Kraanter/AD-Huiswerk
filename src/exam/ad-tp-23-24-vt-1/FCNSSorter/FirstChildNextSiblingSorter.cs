@@ -17,27 +17,78 @@ namespace AD
 
         public void Init()
         {
-            throw new System.NotImplementedException();
+            tree = new FirstChildNextSibling<int>();
+            tree.root = new FirstChildNextSiblingNode<int>(Int32.MaxValue);
         }
 
         public void VoegToe(int getal)
         {
-            throw new System.NotImplementedException();
+            VoegToe(getal, tree.root);
+        }
+
+        private void VoegToe(int getal, FirstChildNextSiblingNode<int> POK)
+        {
+            var NK = new FirstChildNextSiblingNode<int>(getal);
+
+            if (POK?.GetFirstChild() is null)
+                POK.firstChild = NK;
+            else
+            {
+                var node = POK.GetFirstChild();
+                FirstChildNextSiblingNode<int> small = null;
+                while (node?.GetNextSibling() is not null)
+                {
+                    node = node.GetNextSibling();
+                    if (small is null && node.data > NK.data)
+                        small = node;
+                }
+
+                if (node.GetData() <= NK.data)
+                    node.nextSibling = NK;
+                else 
+                    VoegToe(getal, small ?? POK.GetFirstChild());
+            }
         }
 
         public void Sorteer(ref List<int> getallen)
         {
             Init();
 
-            //
-            // Als je "VoegToe" functie niet goed werkt,
-            // kun je gebruik maken van een door ons
-            // gemaakte builder:
-            //
-            // tree = (FirstChildNextSibling<int>) DSBuilder.CreateFCNSSorterIntTree();
-            //
+            foreach (var getal in getallen)  
+                VoegToe(getal);
 
-            throw new System.NotImplementedException();
+            var retList = new List<int>();
+
+            var curNode = tree.root.firstChild;
+            
+            while (curNode is not null)
+            {
+                Sort(curNode, retList);
+                curNode = curNode.nextSibling;
+            }
+
+            getallen = retList;
+        }
+
+        public void Sort(FirstChildNextSiblingNode<int> node, List<int> getallen)
+        {
+            var child = node.firstChild;
+            while (child is not null)
+            {
+                Sort(child, getallen);
+                child = child.nextSibling;
+            }
+            getallen.Add(node.data);
+        }
+
+        private static void ForAllChildren(FirstChildNextSiblingNode<int> node, Action<FirstChildNextSiblingNode<int>> action)
+        {
+            var child = node.firstChild;
+            while (child is not null)
+            {
+                action(child);
+                child = child.nextSibling;
+            }
         }
     }
 }
