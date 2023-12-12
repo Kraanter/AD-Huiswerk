@@ -28,6 +28,8 @@ namespace AD
 
         private void VoegToe(int getal, FirstChildNextSiblingNode<int> POK)
         {
+            // LET OP DEZE FUNCTIE DOET HET NIET ZOALS HIJ HOORT TE WERKEN
+            // DEZE FUNCTIE GAAT MIS MET DE INPUT: 5, 3, 4, 2
             var NK = new FirstChildNextSiblingNode<int>(getal);
 
             if (POK?.GetFirstChild() is null)

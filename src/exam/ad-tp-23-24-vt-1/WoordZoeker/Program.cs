@@ -52,10 +52,10 @@ namespace AD
 
                 gridState[row, col] = ' ';
                 
-                bool left = WoordBestaat(woordZonderBegin, gridState, row, col - 1);
-                bool right = WoordBestaat(woordZonderBegin, gridState, row, col + 1);
-                bool above = WoordBestaat(woordZonderBegin, gridState, row - 1, col);
-                bool below =  WoordBestaat(woordZonderBegin, gridState, row + 1, col);
+                bool left = WoordBestaatUniek(woordZonderBegin, gridState, row, col - 1);
+                bool right = WoordBestaatUniek(woordZonderBegin, gridState, row, col + 1);
+                bool above = WoordBestaatUniek(woordZonderBegin, gridState, row - 1, col);
+                bool below =  WoordBestaatUniek(woordZonderBegin, gridState, row + 1, col);
 
                 return left || right || below || above;
             }
